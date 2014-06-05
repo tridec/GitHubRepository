@@ -1,0 +1,320 @@
+body
+{
+    background-color: #DAE2E8;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.overlay
+{
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 500%;
+    text-align: center;
+    z-index: 1000;
+    background-image: url(../images/Transparent.png);
+}
+
+
+/*******************/
+/* "Left Title" STYLES */
+/*******************/
+td.LeftTitle
+{
+    padding: 3px 5px 3px 5px;
+    text-align: left;
+    background-color: rgb(73, 90, 112);
+    color: #fff;
+    font-size: 16px;
+    font-family: Calibri;
+    font-weight: bold;
+    letter-spacing: 1px;
+    height: 20px;
+}
+
+.hover:hover
+{
+    text-decoration: underline;
+}
+
+/*******************/
+/* "Right Title" STYLES */
+/*******************/
+td.rightTitle
+{
+    padding: 3px 5px 3px 50px;
+    text-align: left;
+    background-color: rgb(73, 90, 112);
+    color: #fff;
+    font-size: 16px;
+    font-family: Calibri;
+    font-weight: bold;
+    letter-spacing: 1px;
+    height: 20px;
+}
+
+td.rightTitle
+{
+    padding: 3px 5px 3px 50px;
+    text-align: left;
+    background-color: rgb(73, 90, 112);
+    color: #fff;
+    font-size: 16px;
+    font-family: Calibri;
+    font-weight: bold;
+    letter-spacing: 1px;
+    height: 20px;
+}
+
+td.rightTitleActiveNav
+{
+    padding: 3px 5px 3px 50px;
+    text-align: left;
+    background-color: rgb(73, 90, 112);
+    color: #fff;
+    font-size: 16px;
+    font-family: Calibri;
+    letter-spacing: 1px;
+    height: 20px;
+}
+
+td.rightSubTitle
+{
+    padding: 3px 5px 3px 50px;
+    text-align: left;
+    background-color: #7692A8;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: Calibri;
+    font-weight: bold;
+    letter-spacing: 1px;
+    height: 20px;
+}
+
+td.rightPOPTitle
+{
+    padding: 3px 5px 3px 50px;
+    text-align: left;
+    background-color: #A20714;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: Calibri;
+    font-weight: bold;
+    letter-spacing: 1px;
+    height: 20px;
+}
+
+/*******************/
+/* "Right Content" STYLES */
+/*******************/
+td.rightContent
+{
+    padding: 15px 25px 5px 21px;
+    border-bottom: 1px solid #DAE2E8;
+    border-right: 1px solid #DAE2E8;
+    background-color: #DAE2E8;
+    color: #000000;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+
+td.rightContentNoSpace
+{
+    padding: 0px 25px 0px 21px;
+    border-bottom: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+
+td.rightContentBanner
+{
+    height: 20px;
+    vertical-align: middle;
+    background-color: #7991A9;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.formlabel
+{
+    padding: 5px;
+    color: #000000;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    text-align: right;
+    background-color: #f3f5f6;
+    vertical-align: top;
+}
+.formlabelalt
+{
+    padding: 5px;
+    color: #000000;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    text-align: right;
+    background-color: #DAE2E8;
+    vertical-align: top;
+}
+
+.formlabelvalue
+{
+    padding: 5px;
+    color: #000000;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: left;
+    background-color: #f3f5f6;
+    vertical-align: top;
+}
+.formlabelaltvalue
+{
+    padding: 5px;
+    color: #000000;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: left;
+    background-color: #DAE2E8;
+    vertical-align: top;
+}
+.formfield
+{
+    padding: 0px;
+    color: #000000;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: left;
+    background-color: #DAE2E8;
+    vertical-align: top;
+}
+
+/*********************/
+/* Title Label Info  */
+/*********************/
+.labeltitle
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+/*********************/
+/* Validation Alert  */
+/*********************/
+.valalert
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FF0000;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+/*********************/
+/* Small Label Info  */
+/*********************/
+.small
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+/*********************/
+/* 508 Hidden STYLES */
+/*********************/
+.hidden
+{
+    position: absolute;
+    top: -10px;
+    left: -500px;
+    height: 1px;
+    width: 1px;
+    top: auto;
+    overflow: hidden;
+}
+
+div.demo
+{
+    position: absolute;
+    top: -150px;
+    left: 250px;
+    clip: rect(0px, 1200px, 1200px, 0px);
+    visibility: visible;
+    z-index: 9;
+}
+
+textarea
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+input[type=text]
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.loginMessage
+{
+    border: #696969 thin solid;
+    background-color: #F0F0F0;
+    padding: 5px;
+    width: 915px;
+}
+
+.rgMasterTable th.GridHeaderSubTitle
+{
+    padding: 3px 5px 3px 50px;
+    text-align: left;
+    background-color: #7692A8;
+    background-image: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: Calibri;
+    font-weight: bold;
+    letter-spacing: 1px;
+    height: 20px;
+}
+#overlay
+{
+    position: fixed;
+    z-index: 99;
+    top: 0px;
+    background-color: White;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    filter: Alpha(Opacity=90);
+    opacity: 0.9;
+    -moz-opacity: 0.9;
+}
+#theprogress
+{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    filter: Alpha(Opacity=100);
+    opacity: 1;
+    -moz-opacity: 1;
+}
+#modalprogress
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: -11px 0 0 -150px;
+    color: #990000;
+    font-weight: bold;
+    font-size: 14px;
+}

@@ -1,0 +1,34 @@
+﻿<!--
+    You can find existing browser definitions at
+    <windir>\Microsoft.NET\Framework\<ver>\CONFIG\Browsers
+-->
+<browsers>
+
+  
+  
+  <browser refID="Default">
+    <capabilities>
+      <capability name="cookies" value="true" />
+    </capabilities>
+  </browser>
+
+  <browser id="NewBrowser" parentID="Safari">
+    <identification>
+      <userAgent match="Desktop" />
+    </identification>
+    <capabilities>
+      <capability name="browser" value="Safari" />
+      <capability name="cookies" value="true" />
+    </capabilities>
+  </browser>
+
+
+
+  <browser refID="Mozilla">
+    <capabilities>
+      <capability name="xml" value="true" />
+    </capabilities>
+  </browser>
+
+  
+</browsers>

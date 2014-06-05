@@ -1,0 +1,22 @@
+/* Accessible Date Picker Calendar - webSemantics */
+/* http://www.websemantics.co.uk/tutorials/accessible_date_picker_calendar/ */
+
+#calendar {width:170px; background:#def; color:#336; border:2px outset #fff; font-size:80%; border-collapse:collapse}
+#calendar * {padding:0; margin:0; text-align:center}
+
+#calendar tr.days th {color:#669}
+#calendar th,
+#calendar td {background:#dfeafc; border:1px solid #ccc; padding:0px}
+#calendar th.heading {padding:2px 0}
+#calendar th.weekend,
+#calendar td.weekend {background:#cde; color:#999}
+#calendar td.current {background:#fff; border:1px solid #fff}
+#calendar td.foot {border:0 solid}
+
+#calendar a {color:#00f; display:block; width:100%; height:100%; text-decoration:none}
+#calendar a:visited {color:#009}
+#calendar a:hover,
+#calendar a:focus,
+#calendar a:active {color:#f00; background:#fff}
+
+.shiftoffscreen {margin-left:-9000px; font-size:1px; line-height:1px; width:1px; height:1px; overflow:hidden}

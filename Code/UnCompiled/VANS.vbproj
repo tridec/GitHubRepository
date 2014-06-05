@@ -1,0 +1,2227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F7AD107-C84F-490E-BB92-48F5A7953B75}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VANS</RootNamespace>
+    <AssemblyName>VANS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>VANS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>VANS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.UI, Version=2009.2.826.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Telerik\RadControls for ASP.NET AJAX Q3 2011\Bin40\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Telerik\RadControls for ASP.NET AJAX Q3 2011\Bin40\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.Practices.EnterpriseLibrary.Data" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.Common" />
+    <Import Include="System.Data.SqlClient" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+    <Import Include="Telerik.Web.UI" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppointmentPrintPreview.aspx" />
+    <Content Include="AppointmentPrintPreviewMember.aspx" />
+    <Content Include="Appointments.aspx" />
+    <Content Include="AppointmentsList.aspx" />
+    <Content Include="AppointmentsListMember.aspx" />
+    <Content Include="Blank.aspx" />
+    <Content Include="ContentPage.aspx" />
+    <Content Include="images\chevrondown.png" />
+    <Content Include="images\chevronup.png" />
+    <Content Include="images\page-loader.gif" />
+    <Content Include="SignatureManagement.aspx" />
+    <Content Include="TemplateByClinicPrintPreview.aspx" />
+    <Content Include="TemplatePrintPreview.aspx" />
+    <Content Include="TemplateSearch.aspx" />
+    <Content Include="ctrlEmail.ascx" />
+    <Content Include="images\CollapseAll11.png" />
+    <Content Include="images\Collapsed.png" />
+    <Content Include="images\ExpandAll11.png" />
+    <Content Include="images\Expanded.png" />
+    <Content Include="img\header.png" />
+    <Content Include="img\StatusThumbs\Status01.PNG" />
+    <Content Include="img\StatusThumbs\Status01From02.PNG" />
+    <Content Include="img\StatusThumbs\Status02From01.PNG" />
+    <Content Include="img\StatusThumbs\Status02From03.PNG" />
+    <Content Include="img\StatusThumbs\Status03From02.PNG" />
+    <Content Include="img\StatusThumbs\Status04From03.PNG" />
+    <Content Include="img\StatusThumbs\Status05From04.PNG" />
+    <Content Include="img\StatusThumbs\Status05From06.PNG" />
+    <Content Include="img\StatusThumbs\Status05From07.PNG" />
+    <Content Include="img\StatusThumbs\Status05From08.PNG" />
+    <Content Include="img\StatusThumbs\Status05From09.PNG" />
+    <Content Include="img\StatusThumbs\Status05From10.PNG" />
+    <Content Include="img\StatusThumbs\Status06From05.PNG" />
+    <Content Include="img\StatusThumbs\Status07From05.PNG" />
+    <Content Include="img\StatusThumbs\Status08From07.PNG" />
+    <Content Include="img\StatusThumbs\Status09From08.PNG" />
+    <Content Include="img\StatusThumbs\Status10From09.PNG" />
+    <Content Include="img\StatusThumbs\Status11From10.PNG" />
+    <Content Include="img\StatusThumbs\StatusBlank.PNG" />
+    <Content Include="default.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="FolderList.aspx" />
+    <Content Include="FolderListTabs.aspx" />
+    <Content Include="HomeText.aspx" />
+    <Content Include="images\ContractAction1.PNG" />
+    <Content Include="images\ContractActionListImage.PNG" />
+    <Content Include="images\FileSearch.png" />
+    <Content Include="images\GreenCheck.png" />
+    <Content Include="images\inter-header-banner-bottom-2.jpg" />
+    <Content Include="images\inter-header-banner-bottom.jpg" />
+    <Content Include="images\inter-header-banner-print.jpg" />
+    <Content Include="images\inter-header-banner-top-2.jpg" />
+    <Content Include="images\inter-header-banner-top-right.jpg" />
+    <Content Include="images\inter-header-banner-top.jpg" />
+    <Content Include="images\RedX.png" />
+    <Content Include="images\ResetButton.PNG" />
+    <Content Include="images\skipnav_image.gif" />
+    <Content Include="images\SpendPlanImage.PNG" />
+    <Content Include="img\add.gif" />
+    <Content Include="img\AddRecord.gif" />
+    <Content Include="img\arrow.gif" />
+    <Content Include="img\arrow_black.gif" />
+    <Content Include="img\arrow_blue.gif" />
+    <Content Include="img\arrow_down.gif" />
+    <Content Include="img\arrow_green.gif" />
+    <Content Include="img\arrow_left.gif" />
+    <Content Include="img\arrow_orange.gif" />
+    <Content Include="img\arrow_red.gif" />
+    <Content Include="img\arrow_yellow.gif" />
+    <Content Include="img\bannerfin1.jpg" />
+    <Content Include="img\bannerfin2.jpg" />
+    <Content Include="img\bg.gif" />
+    <Content Include="img\bgslice.jpg" />
+    <Content Include="img\blackgrey.gif" />
+    <Content Include="img\block_orange.gif" />
+    <Content Include="img\block_red.gif" />
+    <Content Include="img\block_yellow.gif" />
+    <Content Include="img\bluewhite.gif" />
+    <Content Include="img\buttonBg.gif" />
+    <Content Include="img\calendar.gif" />
+    <Content Include="img\calendar_left.gif" />
+    <Content Include="img\Cancel.gif" />
+    <Content Include="img\car.gif" />
+    <Content Include="img\close.gif" />
+    <Content Include="img\codeTab3.jpg" />
+    <Content Include="img\codeTabsArrow.gif" />
+    <Content Include="img\codeTabsArrowDisabled.gif" />
+    <Content Include="img\codeTabsAscx.gif" />
+    <Content Include="img\codeTabsCS.gif" />
+    <Content Include="img\codeTabsCss.gif" />
+    <Content Include="img\codeTabsDescription.gif" />
+    <Content Include="img\codeTabsFinish.gif" />
+    <Content Include="img\codeTabsImages.gif" />
+    <Content Include="img\codeTabsStart.gif" />
+    <Content Include="img\codeTabsVB.gif" />
+    <Content Include="img\codeTabsXML.gif" />
+    <Content Include="img\codeViewBg.gif" />
+    <Content Include="img\computer.gif" />
+    <Content Include="img\contentadminpermission.jpg" />
+    <Content Include="img\contentadminpermission.png" />
+    <Content Include="img\contenteditpermission.jpg" />
+    <Content Include="img\contenteditpermission.png" />
+    <Content Include="img\contentviewpermission.jpg" />
+    <Content Include="img\contentviewpermission.png" />
+    <Content Include="img\contract.gif" />
+    <Content Include="img\dashBox.png" />
+    <Content Include="img\dashBoxFederal.png" />
+    <Content Include="img\Delete.gif" />
+    <Content Include="img\deletepermission.jpg" />
+    <Content Include="img\deletepermission.png" />
+    <Content Include="img\demoButton1.gif" />
+    <Content Include="img\demoButton2.gif" />
+    <Content Include="img\demoButton3.gif" />
+    <Content Include="img\demoChartBg.gif" />
+    <Content Include="img\demoChartBg.jpg" />
+    <Content Include="img\demoChartBg1.jpg" />
+    <Content Include="img\demoNav.gif" />
+    <Content Include="img\divider.gif" />
+    <Content Include="img\divider_vertical.gif" />
+    <Content Include="img\documents.gif" />
+    <Content Include="img\dollar.gif" />
+    <Content Include="img\down.gif" />
+    <Content Include="img\downarrow.gif" />
+    <Content Include="img\downloadBg.gif" />
+    <Content Include="img\down_disable.gif" />
+    <Content Include="img\drop1.gif" />
+    <Content Include="img\drop2.gif" />
+    <Content Include="img\Edit.gif" />
+    <Content Include="img\example1Bg.gif" />
+    <Content Include="img\exampleBg.gif" />
+    <Content Include="img\fieldset.gif" />
+    <Content Include="img\FileIcons\+.gif" />
+    <Content Include="img\FileIcons\access2007.jpg" />
+    <Content Include="img\FileIcons\add_press.gif" />
+    <Content Include="img\FileIcons\add_unpr.gif" />
+    <Content Include="img\FileIcons\approvalCHK.gif" />
+    <Content Include="img\FileIcons\back5.gif" />
+    <Content Include="img\FileIcons\backone.gif" />
+    <Content Include="img\FileIcons\binary.gif" />
+    <Content Include="img\FileIcons\blankdot.gif" />
+    <Content Include="img\FileIcons\blueplus.gif" />
+    <Content Include="img\FileIcons\blue_button.gif" />
+    <Content Include="img\FileIcons\bmp.gif" />
+    <Content Include="img\FileIcons\bullet_gray.gif" />
+    <Content Include="img\FileIcons\bullet_red.gif" />
+    <Content Include="img\FileIcons\clear_button.gif" />
+    <Content Include="img\FileIcons\del.gif" />
+    <Content Include="img\FileIcons\Del1.gif" />
+    <Content Include="img\FileIcons\Delete.gif" />
+    <Content Include="img\FileIcons\delete.jpg" />
+    <Content Include="img\FileIcons\doc+.gif" />
+    <Content Include="img\FileIcons\doc.gif" />
+    <Content Include="img\FileIcons\docx.gif" />
+    <Content Include="img\FileIcons\download.gif" />
+    <Content Include="img\FileIcons\Edit1.gif" />
+    <Content Include="img\FileIcons\eml.gif" />
+    <Content Include="img\FileIcons\excel+.gif" />
+    <Content Include="img\FileIcons\excel.gif" />
+    <Content Include="img\FileIcons\excel2007.jpg" />
+    <Content Include="img\FileIcons\file.gif" />
+    <Content Include="img\FileIcons\folder.gif" />
+    <Content Include="img\FileIcons\frl+.gif" />
+    <Content Include="img\FileIcons\frl.gif" />
+    <Content Include="img\FileIcons\gif.gif" />
+    <Content Include="img\FileIcons\go.gif" />
+    <Content Include="img\FileIcons\green_button.gif" />
+    <Content Include="img\FileIcons\html+.gif" />
+    <Content Include="img\FileIcons\html.gif" />
+    <Content Include="img\FileIcons\jpeg+.gif" />
+    <Content Include="img\FileIcons\jpeg.gif" />
+    <Content Include="img\FileIcons\jpg.jpg" />
+    <Content Include="img\FileIcons\lock.gif" />
+    <Content Include="img\FileIcons\lock2.gif" />
+    <Content Include="img\FileIcons\lock3.gif" />
+    <Content Include="img\FileIcons\lock4.gif" />
+    <Content Include="img\FileIcons\low_high.gif" />
+    <Content Include="img\FileIcons\mail.gif" />
+    <Content Include="img\FileIcons\mdb+.gif" />
+    <Content Include="img\FileIcons\mdb.gif" />
+    <Content Include="img\FileIcons\mdbx.gif" />
+    <Content Include="img\FileIcons\misc+.gif" />
+    <Content Include="img\FileIcons\misc.gif" />
+    <Content Include="img\FileIcons\mov+.gif" />
+    <Content Include="img\FileIcons\mov.gif" />
+    <Content Include="img\FileIcons\mp3.gif" />
+    <Content Include="img\FileIcons\mpeg.gif" />
+    <Content Include="img\FileIcons\ms-project.gif" />
+    <Content Include="img\FileIcons\pdf+.gif" />
+    <Content Include="img\FileIcons\pdf.gif" />
+    <Content Include="img\FileIcons\pdf1+.gif" />
+    <Content Include="img\FileIcons\pdf1.gif" />
+    <Content Include="img\FileIcons\pdf10+.gif" />
+    <Content Include="img\FileIcons\pdf10.gif" />
+    <Content Include="img\FileIcons\people.gif" />
+    <Content Include="img\FileIcons\people2.gif" />
+    <Content Include="img\FileIcons\people3.gif" />
+    <Content Include="img\FileIcons\pic+.gif" />
+    <Content Include="img\FileIcons\pic.gif" />
+    <Content Include="img\FileIcons\plus.gif" />
+    <Content Include="img\FileIcons\png.png" />
+    <Content Include="img\FileIcons\postit.gif" />
+    <Content Include="img\FileIcons\powerpoint2007.jpg" />
+    <Content Include="img\FileIcons\ppt+.gif" />
+    <Content Include="img\FileIcons\ppt.gif" />
+    <Content Include="img\FileIcons\pptx.gif" />
+    <Content Include="img\FileIcons\questionmark.gif" />
+    <Content Include="img\FileIcons\questionmark2.gif" />
+    <Content Include="img\FileIcons\questionmark3.gif" />
+    <Content Include="img\FileIcons\red_button.gif" />
+    <Content Include="img\FileIcons\red_button2.gif" />
+    <Content Include="img\FileIcons\SnapShot.gif" />
+    <Content Include="img\FileIcons\SortArrowDown.gif" />
+    <Content Include="img\FileIcons\SortArrowUp.gif" />
+    <Content Include="img\FileIcons\star.gif" />
+    <Content Include="img\FileIcons\subfolders.gif" />
+    <Content Include="img\FileIcons\tableftup.gif" />
+    <Content Include="img\FileIcons\tabrightup.gif" />
+    <Content Include="img\FileIcons\thumbs_down.gif" />
+    <Content Include="img\FileIcons\thumbs_up.gif" />
+    <Content Include="img\FileIcons\txt+.gif" />
+    <Content Include="img\FileIcons\txt.gif" />
+    <Content Include="img\FileIcons\txt.jpg" />
+    <Content Include="img\FileIcons\Update.gif" />
+    <Content Include="img\FileIcons\upload.gif" />
+    <Content Include="img\FileIcons\visio.gif" />
+    <Content Include="img\FileIcons\vote.gif" />
+    <Content Include="img\FileIcons\waste.gif" />
+    <Content Include="img\FileIcons\wmv.gif" />
+    <Content Include="img\FileIcons\word+.gif" />
+    <Content Include="img\FileIcons\word.gif" />
+    <Content Include="img\FileIcons\word2007.jpg" />
+    <Content Include="img\FileIcons\xls.gif" />
+    <Content Include="img\FileIcons\xlsx.gif" />
+    <Content Include="img\FileIcons\yellow_button.gif" />
+    <Content Include="img\FileIcons\zip+.gif" />
+    <Content Include="img\FileIcons\zip.gif" />
+    <Content Include="img\firefox.png" />
+    <Content Include="img\folder_close.gif" />
+    <Content Include="img\folder_open.gif" />
+    <Content Include="img\footer.gif" />
+    <Content Include="img\FullControl.png" />
+    <Content Include="img\go.gif" />
+    <Content Include="img\group.gif" />
+    <Content Include="img\hammer.gif" />
+    <Content Include="img\hd.png" />
+    <Content Include="img\helpIconCHM.gif" />
+    <Content Include="img\helpIconIE.gif" />
+    <Content Include="img\hourglass.gif" />
+    <Content Include="img\hs-caution.gif" />
+    <Content Include="img\ie.gif" />
+    <Content Include="img\IEOnly.gif" />
+    <Content Include="img\ime_bg.gif" />
+    <Content Include="img\left1.gif" />
+    <Content Include="img\left2.gif" />
+    <Content Include="img\loading-spiral.gif" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\loading3.gif" />
+    <Content Include="img\loading_sm.gif" />
+    <Content Include="img\login.jpg" />
+    <Content Include="img\logout.jpg" />
+    <Content Include="img\managepermission.jpg" />
+    <Content Include="img\managepermission.png" />
+    <Content Include="img\menu.GIF" />
+    <Content Include="img\moduleBg.gif" />
+    <Content Include="img\moduleChart.gif" />
+    <Content Include="img\moduleData.gif" />
+    <Content Include="img\moduleEditChart.gif" />
+    <Content Include="img\moduleTitleLegend.gif" />
+    <Content Include="img\ms_down.gif" />
+    <Content Include="img\ms_up.gif" />
+    <Content Include="img\new.gif" />
+    <Content Include="img\newchildpermission.jpg" />
+    <Content Include="img\newchildpermission.png" />
+    <Content Include="img\noaa_csc_logo.jpg" />
+    <Content Include="img\odc.gif" />
+    <Content Include="img\PageHeaderFade.png" />
+    <Content Include="img\paper.gif" />
+    <Content Include="img\pencilwriting.gif" />
+    <Content Include="img\person.gif" />
+    <Content Include="img\productBox.gif" />
+    <Content Include="img\productCaption.gif" />
+    <Content Include="img\productChooser.jpg" />
+    <Content Include="img\productLogo.gif" />
+    <Content Include="img\RedClosed.gif" />
+    <Content Include="img\RedOpen.gif" />
+    <Content Include="img\Refresh.gif" />
+    <Content Include="img\remove.gif" />
+    <Content Include="img\renamepermission.jpg" />
+    <Content Include="img\renamepermission.png" />
+    <Content Include="img\right1.gif" />
+    <Content Include="img\right2.gif" />
+    <Content Include="img\sideNavBg.gif" />
+    <Content Include="img\sideNavCategory.gif" />
+    <Content Include="img\silk\accept.png" />
+    <Content Include="img\silk\add.png" />
+    <Content Include="img\silk\anchor.png" />
+    <Content Include="img\silk\application.png" />
+    <Content Include="img\silk\application_add.png" />
+    <Content Include="img\silk\application_cascade.png" />
+    <Content Include="img\silk\application_delete.png" />
+    <Content Include="img\silk\application_double.png" />
+    <Content Include="img\silk\application_edit.png" />
+    <Content Include="img\silk\application_error.png" />
+    <Content Include="img\silk\application_form.png" />
+    <Content Include="img\silk\application_form_add.png" />
+    <Content Include="img\silk\application_form_delete.png" />
+    <Content Include="img\silk\application_form_edit.png" />
+    <Content Include="img\silk\application_form_magnify.png" />
+    <Content Include="img\silk\application_get.png" />
+    <Content Include="img\silk\application_go.png" />
+    <Content Include="img\silk\application_home.png" />
+    <Content Include="img\silk\application_key.png" />
+    <Content Include="img\silk\application_lightning.png" />
+    <Content Include="img\silk\application_link.png" />
+    <Content Include="img\silk\application_osx.png" />
+    <Content Include="img\silk\application_osx_terminal.png" />
+    <Content Include="img\silk\application_put.png" />
+    <Content Include="img\silk\application_side_boxes.png" />
+    <Content Include="img\silk\application_side_contract.png" />
+    <Content Include="img\silk\application_side_expand.png" />
+    <Content Include="img\silk\application_side_list.png" />
+    <Content Include="img\silk\application_side_tree.png" />
+    <Content Include="img\silk\application_split.png" />
+    <Content Include="img\silk\application_tile_horizontal.png" />
+    <Content Include="img\silk\application_tile_vertical.png" />
+    <Content Include="img\silk\application_view_columns.png" />
+    <Content Include="img\silk\application_view_detail.png" />
+    <Content Include="img\silk\application_view_gallery.png" />
+    <Content Include="img\silk\application_view_icons.png" />
+    <Content Include="img\silk\application_view_list.png" />
+    <Content Include="img\silk\application_view_tile.png" />
+    <Content Include="img\silk\application_xp.png" />
+    <Content Include="img\silk\application_xp_terminal.png" />
+    <Content Include="img\silk\arrow_branch.png" />
+    <Content Include="img\silk\arrow_divide.png" />
+    <Content Include="img\silk\arrow_down.png" />
+    <Content Include="img\silk\arrow_in.png" />
+    <Content Include="img\silk\arrow_inout.png" />
+    <Content Include="img\silk\arrow_join.png" />
+    <Content Include="img\silk\arrow_left.png" />
+    <Content Include="img\silk\arrow_merge.png" />
+    <Content Include="img\silk\arrow_out.png" />
+    <Content Include="img\silk\arrow_redo.png" />
+    <Content Include="img\silk\arrow_refresh.png" />
+    <Content Include="img\silk\arrow_refresh_small.png" />
+    <Content Include="img\silk\arrow_right.png" />
+    <Content Include="img\silk\arrow_rotate_anticlockwise.png" />
+    <Content Include="img\silk\arrow_rotate_clockwise.png" />
+    <Content Include="img\silk\arrow_switch.png" />
+    <Content Include="img\silk\arrow_turn_left.png" />
+    <Content Include="img\silk\arrow_turn_right.png" />
+    <Content Include="img\silk\arrow_undo.png" />
+    <Content Include="img\silk\arrow_up.png" />
+    <Content Include="img\silk\asterisk_orange.png" />
+    <Content Include="img\silk\asterisk_yellow.png" />
+    <Content Include="img\silk\attach.png" />
+    <Content Include="img\silk\award_star_add.png" />
+    <Content Include="img\silk\award_star_bronze_1.png" />
+    <Content Include="img\silk\award_star_bronze_2.png" />
+    <Content Include="img\silk\award_star_bronze_3.png" />
+    <Content Include="img\silk\award_star_delete.png" />
+    <Content Include="img\silk\award_star_gold_1.png" />
+    <Content Include="img\silk\award_star_gold_2.png" />
+    <Content Include="img\silk\award_star_gold_3.png" />
+    <Content Include="img\silk\award_star_silver_1.png" />
+    <Content Include="img\silk\award_star_silver_2.png" />
+    <Content Include="img\silk\award_star_silver_3.png" />
+    <Content Include="img\silk\basket.png" />
+    <Content Include="img\silk\basket_add.png" />
+    <Content Include="img\silk\basket_delete.png" />
+    <Content Include="img\silk\basket_edit.png" />
+    <Content Include="img\silk\basket_error.png" />
+    <Content Include="img\silk\basket_go.png" />
+    <Content Include="img\silk\basket_put.png" />
+    <Content Include="img\silk\basket_remove.png" />
+    <Content Include="img\silk\bell.png" />
+    <Content Include="img\silk\bell_add.png" />
+    <Content Include="img\silk\bell_delete.png" />
+    <Content Include="img\silk\bell_error.png" />
+    <Content Include="img\silk\bell_go.png" />
+    <Content Include="img\silk\bell_link.png" />
+    <Content Include="img\silk\bin.png" />
+    <Content Include="img\silk\bin_closed.png" />
+    <Content Include="img\silk\bin_empty.png" />
+    <Content Include="img\silk\bomb.png" />
+    <Content Include="img\silk\book.png" />
+    <Content Include="img\silk\book_add.png" />
+    <Content Include="img\silk\book_addresses.png" />
+    <Content Include="img\silk\book_delete.png" />
+    <Content Include="img\silk\book_edit.png" />
+    <Content Include="img\silk\book_error.png" />
+    <Content Include="img\silk\book_go.png" />
+    <Content Include="img\silk\book_key.png" />
+    <Content Include="img\silk\book_link.png" />
+    <Content Include="img\silk\book_next.png" />
+    <Content Include="img\silk\book_open.png" />
+    <Content Include="img\silk\book_previous.png" />
+    <Content Include="img\silk\box.png" />
+    <Content Include="img\silk\brick.png" />
+    <Content Include="img\silk\bricks.png" />
+    <Content Include="img\silk\brick_add.png" />
+    <Content Include="img\silk\brick_delete.png" />
+    <Content Include="img\silk\brick_edit.png" />
+    <Content Include="img\silk\brick_error.png" />
+    <Content Include="img\silk\brick_go.png" />
+    <Content Include="img\silk\brick_link.png" />
+    <Content Include="img\silk\briefcase.png" />
+    <Content Include="img\silk\bug.png" />
+    <Content Include="img\silk\bug_add.png" />
+    <Content Include="img\silk\bug_delete.png" />
+    <Content Include="img\silk\bug_edit.png" />
+    <Content Include="img\silk\bug_error.png" />
+    <Content Include="img\silk\bug_go.png" />
+    <Content Include="img\silk\bug_link.png" />
+    <Content Include="img\silk\building.png" />
+    <Content Include="img\silk\building_add.png" />
+    <Content Include="img\silk\building_delete.png" />
+    <Content Include="img\silk\building_edit.png" />
+    <Content Include="img\silk\building_error.png" />
+    <Content Include="img\silk\building_go.png" />
+    <Content Include="img\silk\building_key.png" />
+    <Content Include="img\silk\building_link.png" />
+    <Content Include="img\silk\bullet_add.png" />
+    <Content Include="img\silk\bullet_arrow_bottom.png" />
+    <Content Include="img\silk\bullet_arrow_down.png" />
+    <Content Include="img\silk\bullet_arrow_top.png" />
+    <Content Include="img\silk\bullet_arrow_up.png" />
+    <Content Include="img\silk\bullet_black.png" />
+    <Content Include="img\silk\bullet_blue.png" />
+    <Content Include="img\silk\bullet_delete.png" />
+    <Content Include="img\silk\bullet_disk.png" />
+    <Content Include="img\silk\bullet_error.png" />
+    <Content Include="img\silk\bullet_feed.png" />
+    <Content Include="img\silk\bullet_go.png" />
+    <Content Include="img\silk\bullet_green.png" />
+    <Content Include="img\silk\bullet_key.png" />
+    <Content Include="img\silk\bullet_orange.png" />
+    <Content Include="img\silk\bullet_picture.png" />
+    <Content Include="img\silk\bullet_pink.png" />
+    <Content Include="img\silk\bullet_purple.png" />
+    <Content Include="img\silk\bullet_red.png" />
+    <Content Include="img\silk\bullet_star.png" />
+    <Content Include="img\silk\bullet_toggle_minus.png" />
+    <Content Include="img\silk\bullet_toggle_plus.png" />
+    <Content Include="img\silk\bullet_white.png" />
+    <Content Include="img\silk\bullet_wrench.png" />
+    <Content Include="img\silk\bullet_yellow.png" />
+    <Content Include="img\silk\cake.png" />
+    <Content Include="img\silk\calculator.png" />
+    <Content Include="img\silk\calculator_add.png" />
+    <Content Include="img\silk\calculator_delete.png" />
+    <Content Include="img\silk\calculator_edit.png" />
+    <Content Include="img\silk\calculator_error.png" />
+    <Content Include="img\silk\calculator_link.png" />
+    <Content Include="img\silk\calendar.png" />
+    <Content Include="img\silk\calendar_add.png" />
+    <Content Include="img\silk\calendar_delete.png" />
+    <Content Include="img\silk\calendar_edit.png" />
+    <Content Include="img\silk\calendar_link.png" />
+    <Content Include="img\silk\calendar_view_day.png" />
+    <Content Include="img\silk\calendar_view_month.png" />
+    <Content Include="img\silk\calendar_view_week.png" />
+    <Content Include="img\silk\camera.png" />
+    <Content Include="img\silk\camera_add.png" />
+    <Content Include="img\silk\camera_delete.png" />
+    <Content Include="img\silk\camera_edit.png" />
+    <Content Include="img\silk\camera_error.png" />
+    <Content Include="img\silk\camera_go.png" />
+    <Content Include="img\silk\camera_link.png" />
+    <Content Include="img\silk\camera_small.png" />
+    <Content Include="img\silk\cancel.png" />
+    <Content Include="img\silk\car.png" />
+    <Content Include="img\silk\cart.png" />
+    <Content Include="img\silk\cart_add.png" />
+    <Content Include="img\silk\cart_delete.png" />
+    <Content Include="img\silk\cart_edit.png" />
+    <Content Include="img\silk\cart_error.png" />
+    <Content Include="img\silk\cart_go.png" />
+    <Content Include="img\silk\cart_put.png" />
+    <Content Include="img\silk\cart_remove.png" />
+    <Content Include="img\silk\car_add.png" />
+    <Content Include="img\silk\car_delete.png" />
+    <Content Include="img\silk\cd.png" />
+    <Content Include="img\silk\cd_add.png" />
+    <Content Include="img\silk\cd_burn.png" />
+    <Content Include="img\silk\cd_delete.png" />
+    <Content Include="img\silk\cd_edit.png" />
+    <Content Include="img\silk\cd_eject.png" />
+    <Content Include="img\silk\cd_go.png" />
+    <Content Include="img\silk\chart_bar.png" />
+    <Content Include="img\silk\chart_bar_add.png" />
+    <Content Include="img\silk\chart_bar_delete.png" />
+    <Content Include="img\silk\chart_bar_edit.png" />
+    <Content Include="img\silk\chart_bar_error.png" />
+    <Content Include="img\silk\chart_bar_link.png" />
+    <Content Include="img\silk\chart_curve.png" />
+    <Content Include="img\silk\chart_curve_add.png" />
+    <Content Include="img\silk\chart_curve_delete.png" />
+    <Content Include="img\silk\chart_curve_edit.png" />
+    <Content Include="img\silk\chart_curve_error.png" />
+    <Content Include="img\silk\chart_curve_go.png" />
+    <Content Include="img\silk\chart_curve_link.png" />
+    <Content Include="img\silk\chart_line.png" />
+    <Content Include="img\silk\chart_line_add.png" />
+    <Content Include="img\silk\chart_line_delete.png" />
+    <Content Include="img\silk\chart_line_edit.png" />
+    <Content Include="img\silk\chart_line_error.png" />
+    <Content Include="img\silk\chart_line_link.png" />
+    <Content Include="img\silk\chart_organisation.png" />
+    <Content Include="img\silk\chart_organisation_add.png" />
+    <Content Include="img\silk\chart_organisation_delete.png" />
+    <Content Include="img\silk\chart_pie.png" />
+    <Content Include="img\silk\chart_pie_add.png" />
+    <Content Include="img\silk\chart_pie_delete.png" />
+    <Content Include="img\silk\chart_pie_edit.png" />
+    <Content Include="img\silk\chart_pie_error.png" />
+    <Content Include="img\silk\chart_pie_link.png" />
+    <Content Include="img\silk\clock.png" />
+    <Content Include="img\silk\clock_add.png" />
+    <Content Include="img\silk\clock_delete.png" />
+    <Content Include="img\silk\clock_edit.png" />
+    <Content Include="img\silk\clock_error.png" />
+    <Content Include="img\silk\clock_go.png" />
+    <Content Include="img\silk\clock_link.png" />
+    <Content Include="img\silk\clock_pause.png" />
+    <Content Include="img\silk\clock_play.png" />
+    <Content Include="img\silk\clock_red.png" />
+    <Content Include="img\silk\clock_stop.png" />
+    <Content Include="img\silk\cog.png" />
+    <Content Include="img\silk\cog_add.png" />
+    <Content Include="img\silk\cog_delete.png" />
+    <Content Include="img\silk\cog_edit.png" />
+    <Content Include="img\silk\cog_error.png" />
+    <Content Include="img\silk\cog_go.png" />
+    <Content Include="img\silk\coins.png" />
+    <Content Include="img\silk\coins_add.png" />
+    <Content Include="img\silk\coins_delete.png" />
+    <Content Include="img\silk\color_swatch.png" />
+    <Content Include="img\silk\color_wheel.png" />
+    <Content Include="img\silk\comment.png" />
+    <Content Include="img\silk\comments.png" />
+    <Content Include="img\silk\comments_add.png" />
+    <Content Include="img\silk\comments_delete.png" />
+    <Content Include="img\silk\comment_add.png" />
+    <Content Include="img\silk\comment_delete.png" />
+    <Content Include="img\silk\comment_edit.png" />
+    <Content Include="img\silk\compress.png" />
+    <Content Include="img\silk\computer.png" />
+    <Content Include="img\silk\computer_add.png" />
+    <Content Include="img\silk\computer_delete.png" />
+    <Content Include="img\silk\computer_edit.png" />
+    <Content Include="img\silk\computer_error.png" />
+    <Content Include="img\silk\computer_go.png" />
+    <Content Include="img\silk\computer_key.png" />
+    <Content Include="img\silk\computer_link.png" />
+    <Content Include="img\silk\connect.png" />
+    <Content Include="img\silk\contrast.png" />
+    <Content Include="img\silk\contrast_decrease.png" />
+    <Content Include="img\silk\contrast_high.png" />
+    <Content Include="img\silk\contrast_increase.png" />
+    <Content Include="img\silk\contrast_low.png" />
+    <Content Include="img\silk\controller.png" />
+    <Content Include="img\silk\controller_add.png" />
+    <Content Include="img\silk\controller_delete.png" />
+    <Content Include="img\silk\controller_error.png" />
+    <Content Include="img\silk\control_eject.png" />
+    <Content Include="img\silk\control_eject_blue.png" />
+    <Content Include="img\silk\control_end.png" />
+    <Content Include="img\silk\control_end_blue.png" />
+    <Content Include="img\silk\control_equalizer.png" />
+    <Content Include="img\silk\control_equalizer_blue.png" />
+    <Content Include="img\silk\control_fastforward.png" />
+    <Content Include="img\silk\control_fastforward_blue.png" />
+    <Content Include="img\silk\control_pause.png" />
+    <Content Include="img\silk\control_pause_blue.png" />
+    <Content Include="img\silk\control_play.png" />
+    <Content Include="img\silk\control_play_blue.png" />
+    <Content Include="img\silk\control_repeat.png" />
+    <Content Include="img\silk\control_repeat_blue.png" />
+    <Content Include="img\silk\control_rewind.png" />
+    <Content Include="img\silk\control_rewind_blue.png" />
+    <Content Include="img\silk\control_start.png" />
+    <Content Include="img\silk\control_start_blue.png" />
+    <Content Include="img\silk\control_stop.png" />
+    <Content Include="img\silk\control_stop_blue.png" />
+    <Content Include="img\silk\creditcards.png" />
+    <Content Include="img\silk\cross.png" />
+    <Content Include="img\silk\css.png" />
+    <Content Include="img\silk\css_add.png" />
+    <Content Include="img\silk\css_delete.png" />
+    <Content Include="img\silk\css_go.png" />
+    <Content Include="img\silk\css_valid.png" />
+    <Content Include="img\silk\cup.png" />
+    <Content Include="img\silk\cup_add.png" />
+    <Content Include="img\silk\cup_delete.png" />
+    <Content Include="img\silk\cup_edit.png" />
+    <Content Include="img\silk\cup_error.png" />
+    <Content Include="img\silk\cup_go.png" />
+    <Content Include="img\silk\cup_key.png" />
+    <Content Include="img\silk\cup_link.png" />
+    <Content Include="img\silk\cursor.png" />
+    <Content Include="img\silk\cut.png" />
+    <Content Include="img\silk\cut_red.png" />
+    <Content Include="img\silk\database.png" />
+    <Content Include="img\silk\database_add.png" />
+    <Content Include="img\silk\database_connect.png" />
+    <Content Include="img\silk\database_delete.png" />
+    <Content Include="img\silk\database_edit.png" />
+    <Content Include="img\silk\database_error.png" />
+    <Content Include="img\silk\database_gear.png" />
+    <Content Include="img\silk\database_go.png" />
+    <Content Include="img\silk\database_key.png" />
+    <Content Include="img\silk\database_lightning.png" />
+    <Content Include="img\silk\database_link.png" />
+    <Content Include="img\silk\database_refresh.png" />
+    <Content Include="img\silk\database_save.png" />
+    <Content Include="img\silk\database_table.png" />
+    <Content Include="img\silk\date.png" />
+    <Content Include="img\silk\date_add.png" />
+    <Content Include="img\silk\date_delete.png" />
+    <Content Include="img\silk\date_edit.png" />
+    <Content Include="img\silk\date_error.png" />
+    <Content Include="img\silk\date_go.png" />
+    <Content Include="img\silk\date_link.png" />
+    <Content Include="img\silk\date_magnify.png" />
+    <Content Include="img\silk\date_next.png" />
+    <Content Include="img\silk\date_previous.png" />
+    <Content Include="img\silk\delete.png" />
+    <Content Include="img\silk\disconnect.png" />
+    <Content Include="img\silk\disk.png" />
+    <Content Include="img\silk\disk_multiple.png" />
+    <Content Include="img\silk\door.png" />
+    <Content Include="img\silk\door_in.png" />
+    <Content Include="img\silk\door_open.png" />
+    <Content Include="img\silk\door_out.png" />
+    <Content Include="img\silk\drink.png" />
+    <Content Include="img\silk\drink_empty.png" />
+    <Content Include="img\silk\drive.png" />
+    <Content Include="img\silk\drive_add.png" />
+    <Content Include="img\silk\drive_burn.png" />
+    <Content Include="img\silk\drive_cd.png" />
+    <Content Include="img\silk\drive_cd_empty.png" />
+    <Content Include="img\silk\drive_delete.png" />
+    <Content Include="img\silk\drive_disk.png" />
+    <Content Include="img\silk\drive_edit.png" />
+    <Content Include="img\silk\drive_error.png" />
+    <Content Include="img\silk\drive_go.png" />
+    <Content Include="img\silk\drive_key.png" />
+    <Content Include="img\silk\drive_link.png" />
+    <Content Include="img\silk\drive_magnify.png" />
+    <Content Include="img\silk\drive_network.png" />
+    <Content Include="img\silk\drive_rename.png" />
+    <Content Include="img\silk\drive_user.png" />
+    <Content Include="img\silk\drive_web.png" />
+    <Content Include="img\silk\dvd.png" />
+    <Content Include="img\silk\dvd_add.png" />
+    <Content Include="img\silk\dvd_delete.png" />
+    <Content Include="img\silk\dvd_edit.png" />
+    <Content Include="img\silk\dvd_error.png" />
+    <Content Include="img\silk\dvd_go.png" />
+    <Content Include="img\silk\dvd_key.png" />
+    <Content Include="img\silk\dvd_link.png" />
+    <Content Include="img\silk\email.png" />
+    <Content Include="img\silk\email_add.png" />
+    <Content Include="img\silk\email_attach.png" />
+    <Content Include="img\silk\email_delete.png" />
+    <Content Include="img\silk\email_edit.png" />
+    <Content Include="img\silk\email_error.png" />
+    <Content Include="img\silk\email_go.png" />
+    <Content Include="img\silk\email_link.png" />
+    <Content Include="img\silk\email_open.png" />
+    <Content Include="img\silk\email_open_image.png" />
+    <Content Include="img\silk\emoticon_evilgrin.png" />
+    <Content Include="img\silk\emoticon_grin.png" />
+    <Content Include="img\silk\emoticon_happy.png" />
+    <Content Include="img\silk\emoticon_smile.png" />
+    <Content Include="img\silk\emoticon_surprised.png" />
+    <Content Include="img\silk\emoticon_tongue.png" />
+    <Content Include="img\silk\emoticon_unhappy.png" />
+    <Content Include="img\silk\emoticon_waii.png" />
+    <Content Include="img\silk\emoticon_wink.png" />
+    <Content Include="img\silk\error.png" />
+    <Content Include="img\silk\error_add.png" />
+    <Content Include="img\silk\error_delete.png" />
+    <Content Include="img\silk\error_go.png" />
+    <Content Include="img\silk\exclamation.png" />
+    <Content Include="img\silk\eye.png" />
+    <Content Include="img\silk\feed.png" />
+    <Content Include="img\silk\feed_add.png" />
+    <Content Include="img\silk\feed_delete.png" />
+    <Content Include="img\silk\feed_disk.png" />
+    <Content Include="img\silk\feed_edit.png" />
+    <Content Include="img\silk\feed_error.png" />
+    <Content Include="img\silk\feed_go.png" />
+    <Content Include="img\silk\feed_key.png" />
+    <Content Include="img\silk\feed_link.png" />
+    <Content Include="img\silk\feed_magnify.png" />
+    <Content Include="img\silk\female.png" />
+    <Content Include="img\silk\film.png" />
+    <Content Include="img\silk\film_add.png" />
+    <Content Include="img\silk\film_delete.png" />
+    <Content Include="img\silk\film_edit.png" />
+    <Content Include="img\silk\film_error.png" />
+    <Content Include="img\silk\film_go.png" />
+    <Content Include="img\silk\film_key.png" />
+    <Content Include="img\silk\film_link.png" />
+    <Content Include="img\silk\film_save.png" />
+    <Content Include="img\silk\find.png" />
+    <Content Include="img\silk\flag_blue.png" />
+    <Content Include="img\silk\flag_green.png" />
+    <Content Include="img\silk\flag_orange.png" />
+    <Content Include="img\silk\flag_pink.png" />
+    <Content Include="img\silk\flag_purple.png" />
+    <Content Include="img\silk\flag_red.png" />
+    <Content Include="img\silk\flag_yellow.png" />
+    <Content Include="img\silk\folder.png" />
+    <Content Include="img\silk\folder_add.png" />
+    <Content Include="img\silk\folder_bell.png" />
+    <Content Include="img\silk\folder_brick.png" />
+    <Content Include="img\silk\folder_bug.png" />
+    <Content Include="img\silk\folder_camera.png" />
+    <Content Include="img\silk\folder_database.png" />
+    <Content Include="img\silk\folder_delete.png" />
+    <Content Include="img\silk\folder_edit.png" />
+    <Content Include="img\silk\folder_error.png" />
+    <Content Include="img\silk\folder_explore.png" />
+    <Content Include="img\silk\folder_feed.png" />
+    <Content Include="img\silk\folder_find.png" />
+    <Content Include="img\silk\folder_go.png" />
+    <Content Include="img\silk\folder_heart.png" />
+    <Content Include="img\silk\folder_image.png" />
+    <Content Include="img\silk\folder_key.png" />
+    <Content Include="img\silk\folder_lightbulb.png" />
+    <Content Include="img\silk\folder_link.png" />
+    <Content Include="img\silk\folder_magnify.png" />
+    <Content Include="img\silk\folder_page.png" />
+    <Content Include="img\silk\folder_page_white.png" />
+    <Content Include="img\silk\folder_palette.png" />
+    <Content Include="img\silk\folder_picture.png" />
+    <Content Include="img\silk\folder_star.png" />
+    <Content Include="img\silk\folder_table.png" />
+    <Content Include="img\silk\folder_user.png" />
+    <Content Include="img\silk\folder_wrench.png" />
+    <Content Include="img\silk\font.png" />
+    <Content Include="img\silk\font_add.png" />
+    <Content Include="img\silk\font_delete.png" />
+    <Content Include="img\silk\font_go.png" />
+    <Content Include="img\silk\group.png" />
+    <Content Include="img\silk\group_add.png" />
+    <Content Include="img\silk\group_delete.png" />
+    <Content Include="img\silk\group_edit.png" />
+    <Content Include="img\silk\group_error.png" />
+    <Content Include="img\silk\group_gear.png" />
+    <Content Include="img\silk\group_go.png" />
+    <Content Include="img\silk\group_key.png" />
+    <Content Include="img\silk\group_link.png" />
+    <Content Include="img\silk\heart.png" />
+    <Content Include="img\silk\heart_add.png" />
+    <Content Include="img\silk\heart_delete.png" />
+    <Content Include="img\silk\help.png" />
+    <Content Include="img\silk\hourglass.png" />
+    <Content Include="img\silk\hourglass_add.png" />
+    <Content Include="img\silk\hourglass_delete.png" />
+    <Content Include="img\silk\hourglass_go.png" />
+    <Content Include="img\silk\hourglass_link.png" />
+    <Content Include="img\silk\house.png" />
+    <Content Include="img\silk\house_go.png" />
+    <Content Include="img\silk\house_link.png" />
+    <Content Include="img\silk\html.png" />
+    <Content Include="img\silk\html_add.png" />
+    <Content Include="img\silk\html_delete.png" />
+    <Content Include="img\silk\html_go.png" />
+    <Content Include="img\silk\html_valid.png" />
+    <Content Include="img\silk\image.png" />
+    <Content Include="img\silk\images.png" />
+    <Content Include="img\silk\image_add.png" />
+    <Content Include="img\silk\image_delete.png" />
+    <Content Include="img\silk\image_edit.png" />
+    <Content Include="img\silk\image_link.png" />
+    <Content Include="img\silk\information.png" />
+    <Content Include="img\silk\ipod.png" />
+    <Content Include="img\silk\ipod_cast.png" />
+    <Content Include="img\silk\ipod_cast_add.png" />
+    <Content Include="img\silk\ipod_cast_delete.png" />
+    <Content Include="img\silk\ipod_sound.png" />
+    <Content Include="img\silk\joystick.png" />
+    <Content Include="img\silk\joystick_add.png" />
+    <Content Include="img\silk\joystick_delete.png" />
+    <Content Include="img\silk\joystick_error.png" />
+    <Content Include="img\silk\key.png" />
+    <Content Include="img\silk\keyboard.png" />
+    <Content Include="img\silk\keyboard_add.png" />
+    <Content Include="img\silk\keyboard_delete.png" />
+    <Content Include="img\silk\keyboard_magnify.png" />
+    <Content Include="img\silk\key_add.png" />
+    <Content Include="img\silk\key_delete.png" />
+    <Content Include="img\silk\key_go.png" />
+    <Content Include="img\silk\layers.png" />
+    <Content Include="img\silk\layout.png" />
+    <Content Include="img\silk\layout_add.png" />
+    <Content Include="img\silk\layout_content.png" />
+    <Content Include="img\silk\layout_delete.png" />
+    <Content Include="img\silk\layout_edit.png" />
+    <Content Include="img\silk\layout_error.png" />
+    <Content Include="img\silk\layout_header.png" />
+    <Content Include="img\silk\layout_link.png" />
+    <Content Include="img\silk\layout_sidebar.png" />
+    <Content Include="img\silk\lightbulb.png" />
+    <Content Include="img\silk\lightbulb_add.png" />
+    <Content Include="img\silk\lightbulb_delete.png" />
+    <Content Include="img\silk\lightbulb_off.png" />
+    <Content Include="img\silk\lightning.png" />
+    <Content Include="img\silk\lightning_add.png" />
+    <Content Include="img\silk\lightning_delete.png" />
+    <Content Include="img\silk\lightning_go.png" />
+    <Content Include="img\silk\link.png" />
+    <Content Include="img\silk\link_add.png" />
+    <Content Include="img\silk\link_break.png" />
+    <Content Include="img\silk\link_delete.png" />
+    <Content Include="img\silk\link_edit.png" />
+    <Content Include="img\silk\link_error.png" />
+    <Content Include="img\silk\link_go.png" />
+    <Content Include="img\silk\lock.png" />
+    <Content Include="img\silk\lock_add.png" />
+    <Content Include="img\silk\lock_break.png" />
+    <Content Include="img\silk\lock_delete.png" />
+    <Content Include="img\silk\lock_edit.png" />
+    <Content Include="img\silk\lock_go.png" />
+    <Content Include="img\silk\lock_open.png" />
+    <Content Include="img\silk\lorry.png" />
+    <Content Include="img\silk\lorry_add.png" />
+    <Content Include="img\silk\lorry_delete.png" />
+    <Content Include="img\silk\lorry_error.png" />
+    <Content Include="img\silk\lorry_flatbed.png" />
+    <Content Include="img\silk\lorry_go.png" />
+    <Content Include="img\silk\lorry_link.png" />
+    <Content Include="img\silk\magifier_zoom_out.png" />
+    <Content Include="img\silk\magnifier.png" />
+    <Content Include="img\silk\magnifier_zoom_in.png" />
+    <Content Include="img\silk\male.png" />
+    <Content Include="img\silk\map.png" />
+    <Content Include="img\silk\map_add.png" />
+    <Content Include="img\silk\map_delete.png" />
+    <Content Include="img\silk\map_edit.png" />
+    <Content Include="img\silk\map_go.png" />
+    <Content Include="img\silk\map_magnify.png" />
+    <Content Include="img\silk\medal_bronze_1.png" />
+    <Content Include="img\silk\medal_bronze_2.png" />
+    <Content Include="img\silk\medal_bronze_3.png" />
+    <Content Include="img\silk\medal_bronze_add.png" />
+    <Content Include="img\silk\medal_bronze_delete.png" />
+    <Content Include="img\silk\medal_gold_1.png" />
+    <Content Include="img\silk\medal_gold_2.png" />
+    <Content Include="img\silk\medal_gold_3.png" />
+    <Content Include="img\silk\medal_gold_add.png" />
+    <Content Include="img\silk\medal_gold_delete.png" />
+    <Content Include="img\silk\medal_silver_1.png" />
+    <Content Include="img\silk\medal_silver_2.png" />
+    <Content Include="img\silk\medal_silver_3.png" />
+    <Content Include="img\silk\medal_silver_add.png" />
+    <Content Include="img\silk\medal_silver_delete.png" />
+    <Content Include="img\silk\minus.png" />
+    <Content Include="img\silk\money.png" />
+    <Content Include="img\silk\money_add.png" />
+    <Content Include="img\silk\money_delete.png" />
+    <Content Include="img\silk\money_dollar.png" />
+    <Content Include="img\silk\money_euro.png" />
+    <Content Include="img\silk\money_pound.png" />
+    <Content Include="img\silk\money_yen.png" />
+    <Content Include="img\silk\monitor.png" />
+    <Content Include="img\silk\monitor_add.png" />
+    <Content Include="img\silk\monitor_delete.png" />
+    <Content Include="img\silk\monitor_edit.png" />
+    <Content Include="img\silk\monitor_error.png" />
+    <Content Include="img\silk\monitor_go.png" />
+    <Content Include="img\silk\monitor_lightning.png" />
+    <Content Include="img\silk\monitor_link.png" />
+    <Content Include="img\silk\mouse.png" />
+    <Content Include="img\silk\mouse_add.png" />
+    <Content Include="img\silk\mouse_delete.png" />
+    <Content Include="img\silk\mouse_error.png" />
+    <Content Include="img\silk\music.png" />
+    <Content Include="img\silk\new.png" />
+    <Content Include="img\silk\newspaper.png" />
+    <Content Include="img\silk\newspaper_add.png" />
+    <Content Include="img\silk\newspaper_delete.png" />
+    <Content Include="img\silk\newspaper_go.png" />
+    <Content Include="img\silk\newspaper_link.png" />
+    <Content Include="img\silk\note.png" />
+    <Content Include="img\silk\note_add.png" />
+    <Content Include="img\silk\note_delete.png" />
+    <Content Include="img\silk\note_edit.png" />
+    <Content Include="img\silk\note_error.png" />
+    <Content Include="img\silk\note_go.png" />
+    <Content Include="img\silk\overlays.png" />
+    <Content Include="img\silk\package.png" />
+    <Content Include="img\silk\package_add.png" />
+    <Content Include="img\silk\package_delete.png" />
+    <Content Include="img\silk\package_go.png" />
+    <Content Include="img\silk\package_green.png" />
+    <Content Include="img\silk\package_link.png" />
+    <Content Include="img\silk\page.png" />
+    <Content Include="img\silk\page_add.png" />
+    <Content Include="img\silk\page_attach.png" />
+    <Content Include="img\silk\page_code.png" />
+    <Content Include="img\silk\page_copy.png" />
+    <Content Include="img\silk\page_delete.png" />
+    <Content Include="img\silk\page_edit.png" />
+    <Content Include="img\silk\page_error.png" />
+    <Content Include="img\silk\page_excel.png" />
+    <Content Include="img\silk\page_find.png" />
+    <Content Include="img\silk\page_gear.png" />
+    <Content Include="img\silk\page_go.png" />
+    <Content Include="img\silk\page_green.png" />
+    <Content Include="img\silk\page_key.png" />
+    <Content Include="img\silk\page_lightning.png" />
+    <Content Include="img\silk\page_link.png" />
+    <Content Include="img\silk\page_paintbrush.png" />
+    <Content Include="img\silk\page_paste.png" />
+    <Content Include="img\silk\page_red.png" />
+    <Content Include="img\silk\page_refresh.png" />
+    <Content Include="img\silk\page_save.png" />
+    <Content Include="img\silk\page_white.png" />
+    <Content Include="img\silk\page_white_acrobat.png" />
+    <Content Include="img\silk\page_white_actionscript.png" />
+    <Content Include="img\silk\page_white_add.png" />
+    <Content Include="img\silk\page_white_c.png" />
+    <Content Include="img\silk\page_white_camera.png" />
+    <Content Include="img\silk\page_white_cd.png" />
+    <Content Include="img\silk\page_white_code.png" />
+    <Content Include="img\silk\page_white_code_red.png" />
+    <Content Include="img\silk\page_white_coldfusion.png" />
+    <Content Include="img\silk\page_white_compressed.png" />
+    <Content Include="img\silk\page_white_copy.png" />
+    <Content Include="img\silk\page_white_cplusplus.png" />
+    <Content Include="img\silk\page_white_csharp.png" />
+    <Content Include="img\silk\page_white_cup.png" />
+    <Content Include="img\silk\page_white_database.png" />
+    <Content Include="img\silk\page_white_delete.png" />
+    <Content Include="img\silk\page_white_dvd.png" />
+    <Content Include="img\silk\page_white_edit.png" />
+    <Content Include="img\silk\page_white_error.png" />
+    <Content Include="img\silk\page_white_excel.png" />
+    <Content Include="img\silk\page_white_find.png" />
+    <Content Include="img\silk\page_white_flash.png" />
+    <Content Include="img\silk\page_white_freehand.png" />
+    <Content Include="img\silk\page_white_gear.png" />
+    <Content Include="img\silk\page_white_get.png" />
+    <Content Include="img\silk\page_white_go.png" />
+    <Content Include="img\silk\page_white_h.png" />
+    <Content Include="img\silk\page_white_horizontal.png" />
+    <Content Include="img\silk\page_white_key.png" />
+    <Content Include="img\silk\page_white_lightning.png" />
+    <Content Include="img\silk\page_white_link.png" />
+    <Content Include="img\silk\page_white_magnify.png" />
+    <Content Include="img\silk\page_white_medal.png" />
+    <Content Include="img\silk\page_white_office.png" />
+    <Content Include="img\silk\page_white_paint.png" />
+    <Content Include="img\silk\page_white_paintbrush.png" />
+    <Content Include="img\silk\page_white_paste.png" />
+    <Content Include="img\silk\page_white_php.png" />
+    <Content Include="img\silk\page_white_picture.png" />
+    <Content Include="img\silk\page_white_powerpoint.png" />
+    <Content Include="img\silk\page_white_put.png" />
+    <Content Include="img\silk\page_white_ruby.png" />
+    <Content Include="img\silk\page_white_stack.png" />
+    <Content Include="img\silk\page_white_star.png" />
+    <Content Include="img\silk\page_white_swoosh.png" />
+    <Content Include="img\silk\page_white_text.png" />
+    <Content Include="img\silk\page_white_text_width.png" />
+    <Content Include="img\silk\page_white_tux.png" />
+    <Content Include="img\silk\page_white_vector.png" />
+    <Content Include="img\silk\page_white_visualstudio.png" />
+    <Content Include="img\silk\page_white_width.png" />
+    <Content Include="img\silk\page_white_word.png" />
+    <Content Include="img\silk\page_white_world.png" />
+    <Content Include="img\silk\page_white_wrench.png" />
+    <Content Include="img\silk\page_white_zip.png" />
+    <Content Include="img\silk\page_word.png" />
+    <Content Include="img\silk\page_world.png" />
+    <Content Include="img\silk\paintbrush.png" />
+    <Content Include="img\silk\paintcan.png" />
+    <Content Include="img\silk\palette.png" />
+    <Content Include="img\silk\paste_plain.png" />
+    <Content Include="img\silk\paste_word.png" />
+    <Content Include="img\silk\pencil.png" />
+    <Content Include="img\silk\pencil_add.png" />
+    <Content Include="img\silk\pencil_delete.png" />
+    <Content Include="img\silk\pencil_go.png" />
+    <Content Include="img\silk\phone.png" />
+    <Content Include="img\silk\phone_add.png" />
+    <Content Include="img\silk\phone_delete.png" />
+    <Content Include="img\silk\phone_sound.png" />
+    <Content Include="img\silk\photo.png" />
+    <Content Include="img\silk\photos.png" />
+    <Content Include="img\silk\photo_add.png" />
+    <Content Include="img\silk\photo_delete.png" />
+    <Content Include="img\silk\photo_link.png" />
+    <Content Include="img\silk\picture.png" />
+    <Content Include="img\silk\pictures.png" />
+    <Content Include="img\silk\picture_add.png" />
+    <Content Include="img\silk\picture_delete.png" />
+    <Content Include="img\silk\picture_edit.png" />
+    <Content Include="img\silk\picture_empty.png" />
+    <Content Include="img\silk\picture_error.png" />
+    <Content Include="img\silk\picture_go.png" />
+    <Content Include="img\silk\picture_key.png" />
+    <Content Include="img\silk\picture_link.png" />
+    <Content Include="img\silk\picture_save.png" />
+    <Content Include="img\silk\pilcrow.png" />
+    <Content Include="img\silk\pill.png" />
+    <Content Include="img\silk\pill_add.png" />
+    <Content Include="img\silk\pill_delete.png" />
+    <Content Include="img\silk\pill_go.png" />
+    <Content Include="img\silk\plugin.png" />
+    <Content Include="img\silk\plugin_add.png" />
+    <Content Include="img\silk\plugin_delete.png" />
+    <Content Include="img\silk\plugin_disabled.png" />
+    <Content Include="img\silk\plugin_edit.png" />
+    <Content Include="img\silk\plugin_error.png" />
+    <Content Include="img\silk\plugin_go.png" />
+    <Content Include="img\silk\plugin_link.png" />
+    <Content Include="img\silk\plus.png" />
+    <Content Include="img\silk\printer.png" />
+    <Content Include="img\silk\printer_add.png" />
+    <Content Include="img\silk\printer_delete.png" />
+    <Content Include="img\silk\printer_empty.png" />
+    <Content Include="img\silk\printer_error.png" />
+    <Content Include="img\silk\rainbow.png" />
+    <Content Include="img\silk\report.png" />
+    <Content Include="img\silk\report_add.png" />
+    <Content Include="img\silk\report_delete.png" />
+    <Content Include="img\silk\report_disk.png" />
+    <Content Include="img\silk\report_edit.png" />
+    <Content Include="img\silk\report_go.png" />
+    <Content Include="img\silk\report_key.png" />
+    <Content Include="img\silk\report_link.png" />
+    <Content Include="img\silk\report_magnify.png" />
+    <Content Include="img\silk\report_picture.png" />
+    <Content Include="img\silk\report_user.png" />
+    <Content Include="img\silk\report_word.png" />
+    <Content Include="img\silk\resultset_first.png" />
+    <Content Include="img\silk\resultset_last.png" />
+    <Content Include="img\silk\resultset_next.png" />
+    <Content Include="img\silk\resultset_previous.png" />
+    <Content Include="img\silk\rosette.png" />
+    <Content Include="img\silk\rss.png" />
+    <Content Include="img\silk\rss_add.png" />
+    <Content Include="img\silk\rss_delete.png" />
+    <Content Include="img\silk\rss_go.png" />
+    <Content Include="img\silk\rss_valid.png" />
+    <Content Include="img\silk\ruby.png" />
+    <Content Include="img\silk\ruby_add.png" />
+    <Content Include="img\silk\ruby_delete.png" />
+    <Content Include="img\silk\ruby_gear.png" />
+    <Content Include="img\silk\ruby_get.png" />
+    <Content Include="img\silk\ruby_go.png" />
+    <Content Include="img\silk\ruby_key.png" />
+    <Content Include="img\silk\ruby_link.png" />
+    <Content Include="img\silk\ruby_put.png" />
+    <Content Include="img\silk\script.png" />
+    <Content Include="img\silk\script_add.png" />
+    <Content Include="img\silk\script_code.png" />
+    <Content Include="img\silk\script_code_red.png" />
+    <Content Include="img\silk\script_delete.png" />
+    <Content Include="img\silk\script_edit.png" />
+    <Content Include="img\silk\script_error.png" />
+    <Content Include="img\silk\script_gear.png" />
+    <Content Include="img\silk\script_go.png" />
+    <Content Include="img\silk\script_key.png" />
+    <Content Include="img\silk\script_lightning.png" />
+    <Content Include="img\silk\script_link.png" />
+    <Content Include="img\silk\script_palette.png" />
+    <Content Include="img\silk\script_save.png" />
+    <Content Include="img\silk\server.png" />
+    <Content Include="img\silk\server_add.png" />
+    <Content Include="img\silk\server_chart.png" />
+    <Content Include="img\silk\server_compressed.png" />
+    <Content Include="img\silk\server_connect.png" />
+    <Content Include="img\silk\server_database.png" />
+    <Content Include="img\silk\server_delete.png" />
+    <Content Include="img\silk\server_edit.png" />
+    <Content Include="img\silk\server_error.png" />
+    <Content Include="img\silk\server_go.png" />
+    <Content Include="img\silk\server_key.png" />
+    <Content Include="img\silk\server_lightning.png" />
+    <Content Include="img\silk\server_link.png" />
+    <Content Include="img\silk\server_uncompressed.png" />
+    <Content Include="img\silk\shading.png" />
+    <Content Include="img\silk\shape_align_bottom.png" />
+    <Content Include="img\silk\shape_align_center.png" />
+    <Content Include="img\silk\shape_align_left.png" />
+    <Content Include="img\silk\shape_align_middle.png" />
+    <Content Include="img\silk\shape_align_right.png" />
+    <Content Include="img\silk\shape_align_top.png" />
+    <Content Include="img\silk\shape_flip_horizontal.png" />
+    <Content Include="img\silk\shape_flip_vertical.png" />
+    <Content Include="img\silk\shape_group.png" />
+    <Content Include="img\silk\shape_handles.png" />
+    <Content Include="img\silk\shape_move_back.png" />
+    <Content Include="img\silk\shape_move_backwards.png" />
+    <Content Include="img\silk\shape_move_forwards.png" />
+    <Content Include="img\silk\shape_move_front.png" />
+    <Content Include="img\silk\shape_rotate_anticlockwise.png" />
+    <Content Include="img\silk\shape_rotate_clockwise.png" />
+    <Content Include="img\silk\shape_square.png" />
+    <Content Include="img\silk\shape_square_add.png" />
+    <Content Include="img\silk\shape_square_delete.png" />
+    <Content Include="img\silk\shape_square_edit.png" />
+    <Content Include="img\silk\shape_square_error.png" />
+    <Content Include="img\silk\shape_square_go.png" />
+    <Content Include="img\silk\shape_square_key.png" />
+    <Content Include="img\silk\shape_square_link.png" />
+    <Content Include="img\silk\shape_ungroup.png" />
+    <Content Include="img\silk\shield.png" />
+    <Content Include="img\silk\shield_add.png" />
+    <Content Include="img\silk\shield_delete.png" />
+    <Content Include="img\silk\shield_go.png" />
+    <Content Include="img\silk\sitemap.png" />
+    <Content Include="img\silk\sitemap_color.png" />
+    <Content Include="img\silk\sound.png" />
+    <Content Include="img\silk\sound_add.png" />
+    <Content Include="img\silk\sound_delete.png" />
+    <Content Include="img\silk\sound_low.png" />
+    <Content Include="img\silk\sound_mute.png" />
+    <Content Include="img\silk\sound_none.png" />
+    <Content Include="img\silk\spellcheck.png" />
+    <Content Include="img\silk\sport_8ball.png" />
+    <Content Include="img\silk\sport_basketball.png" />
+    <Content Include="img\silk\sport_football.png" />
+    <Content Include="img\silk\sport_golf.png" />
+    <Content Include="img\silk\sport_raquet.png" />
+    <Content Include="img\silk\sport_shuttlecock.png" />
+    <Content Include="img\silk\sport_soccer.png" />
+    <Content Include="img\silk\sport_tennis.png" />
+    <Content Include="img\silk\star.png" />
+    <Content Include="img\silk\status_away.png" />
+    <Content Include="img\silk\status_busy.png" />
+    <Content Include="img\silk\status_offline.png" />
+    <Content Include="img\silk\status_online.png" />
+    <Content Include="img\silk\stop.png" />
+    <Content Include="img\silk\style.png" />
+    <Content Include="img\silk\style_add.png" />
+    <Content Include="img\silk\style_delete.png" />
+    <Content Include="img\silk\style_edit.png" />
+    <Content Include="img\silk\style_go.png" />
+    <Content Include="img\silk\sum.png" />
+    <Content Include="img\silk\tab.png" />
+    <Content Include="img\silk\table.png" />
+    <Content Include="img\silk\table_add.png" />
+    <Content Include="img\silk\table_delete.png" />
+    <Content Include="img\silk\table_edit.png" />
+    <Content Include="img\silk\table_error.png" />
+    <Content Include="img\silk\table_gear.png" />
+    <Content Include="img\silk\table_go.png" />
+    <Content Include="img\silk\table_key.png" />
+    <Content Include="img\silk\table_lightning.png" />
+    <Content Include="img\silk\table_link.png" />
+    <Content Include="img\silk\table_multiple.png" />
+    <Content Include="img\silk\table_refresh.png" />
+    <Content Include="img\silk\table_relationship.png" />
+    <Content Include="img\silk\table_row_delete.png" />
+    <Content Include="img\silk\table_row_insert.png" />
+    <Content Include="img\silk\table_save.png" />
+    <Content Include="img\silk\table_sort.png" />
+    <Content Include="img\silk\tab_add.png" />
+    <Content Include="img\silk\tab_delete.png" />
+    <Content Include="img\silk\tab_edit.png" />
+    <Content Include="img\silk\tab_go.png" />
+    <Content Include="img\silk\tag.png" />
+    <Content Include="img\silk\tag_blue.png" />
+    <Content Include="img\silk\tag_blue_add.png" />
+    <Content Include="img\silk\tag_blue_delete.png" />
+    <Content Include="img\silk\tag_blue_edit.png" />
+    <Content Include="img\silk\tag_green.png" />
+    <Content Include="img\silk\tag_orange.png" />
+    <Content Include="img\silk\tag_pink.png" />
+    <Content Include="img\silk\tag_purple.png" />
+    <Content Include="img\silk\tag_red.png" />
+    <Content Include="img\silk\tag_yellow.png" />
+    <Content Include="img\silk\telephone.png" />
+    <Content Include="img\silk\telephone_add.png" />
+    <Content Include="img\silk\telephone_delete.png" />
+    <Content Include="img\silk\telephone_edit.png" />
+    <Content Include="img\silk\telephone_error.png" />
+    <Content Include="img\silk\telephone_go.png" />
+    <Content Include="img\silk\telephone_key.png" />
+    <Content Include="img\silk\telephone_link.png" />
+    <Content Include="img\silk\television.png" />
+    <Content Include="img\silk\television_add.png" />
+    <Content Include="img\silk\television_delete.png" />
+    <Content Include="img\silk\textfield.png" />
+    <Content Include="img\silk\textfield_add.png" />
+    <Content Include="img\silk\textfield_delete.png" />
+    <Content Include="img\silk\textfield_key.png" />
+    <Content Include="img\silk\textfield_rename.png" />
+    <Content Include="img\silk\text_align_center.png" />
+    <Content Include="img\silk\text_align_justify.png" />
+    <Content Include="img\silk\text_align_left.png" />
+    <Content Include="img\silk\text_align_right.png" />
+    <Content Include="img\silk\text_allcaps.png" />
+    <Content Include="img\silk\text_bold.png" />
+    <Content Include="img\silk\text_columns.png" />
+    <Content Include="img\silk\text_dropcaps.png" />
+    <Content Include="img\silk\text_heading_1.png" />
+    <Content Include="img\silk\text_heading_2.png" />
+    <Content Include="img\silk\text_heading_3.png" />
+    <Content Include="img\silk\text_heading_4.png" />
+    <Content Include="img\silk\text_heading_5.png" />
+    <Content Include="img\silk\text_heading_6.png" />
+    <Content Include="img\silk\text_horizontalrule.png" />
+    <Content Include="img\silk\text_indent.png" />
+    <Content Include="img\silk\text_indent_remove.png" />
+    <Content Include="img\silk\text_italic.png" />
+    <Content Include="img\silk\text_kerning.png" />
+    <Content Include="img\silk\text_letterspacing.png" />
+    <Content Include="img\silk\text_letter_omega.png" />
+    <Content Include="img\silk\text_linespacing.png" />
+    <Content Include="img\silk\text_list_bullets.png" />
+    <Content Include="img\silk\text_list_numbers.png" />
+    <Content Include="img\silk\text_lowercase.png" />
+    <Content Include="img\silk\text_padding_bottom.png" />
+    <Content Include="img\silk\text_padding_left.png" />
+    <Content Include="img\silk\text_padding_right.png" />
+    <Content Include="img\silk\text_padding_top.png" />
+    <Content Include="img\silk\text_replace.png" />
+    <Content Include="img\silk\text_signature.png" />
+    <Content Include="img\silk\text_smallcaps.png" />
+    <Content Include="img\silk\text_strikethrough.png" />
+    <Content Include="img\silk\text_subscript.png" />
+    <Content Include="img\silk\text_superscript.png" />
+    <Content Include="img\silk\text_underline.png" />
+    <Content Include="img\silk\text_uppercase.png" />
+    <Content Include="img\silk\thumb_down.png" />
+    <Content Include="img\silk\thumb_up.png" />
+    <Content Include="img\silk\tick.png" />
+    <Content Include="img\silk\time.png" />
+    <Content Include="img\silk\timeline_marker.png" />
+    <Content Include="img\silk\time_add.png" />
+    <Content Include="img\silk\time_delete.png" />
+    <Content Include="img\silk\time_go.png" />
+    <Content Include="img\silk\transmit.png" />
+    <Content Include="img\silk\transmit_add.png" />
+    <Content Include="img\silk\transmit_blue.png" />
+    <Content Include="img\silk\transmit_delete.png" />
+    <Content Include="img\silk\transmit_edit.png" />
+    <Content Include="img\silk\transmit_error.png" />
+    <Content Include="img\silk\transmit_go.png" />
+    <Content Include="img\silk\tux.png" />
+    <Content Include="img\silk\user.png" />
+    <Content Include="img\silk\user_add.png" />
+    <Content Include="img\silk\user_comment.png" />
+    <Content Include="img\silk\user_delete.png" />
+    <Content Include="img\silk\user_edit.png" />
+    <Content Include="img\silk\user_female.png" />
+    <Content Include="img\silk\user_go.png" />
+    <Content Include="img\silk\user_gray.png" />
+    <Content Include="img\silk\user_green.png" />
+    <Content Include="img\silk\user_orange.png" />
+    <Content Include="img\silk\user_red.png" />
+    <Content Include="img\silk\user_suit.png" />
+    <Content Include="img\silk\vcard.png" />
+    <Content Include="img\silk\vcard_add.png" />
+    <Content Include="img\silk\vcard_delete.png" />
+    <Content Include="img\silk\vcard_edit.png" />
+    <Content Include="img\silk\vector.png" />
+    <Content Include="img\silk\vector_add.png" />
+    <Content Include="img\silk\vector_delete.png" />
+    <Content Include="img\silk\wand.png" />
+    <Content Include="img\silk\weather_clouds.png" />
+    <Content Include="img\silk\weather_cloudy.png" />
+    <Content Include="img\silk\weather_lightning.png" />
+    <Content Include="img\silk\weather_rain.png" />
+    <Content Include="img\silk\weather_snow.png" />
+    <Content Include="img\silk\weather_sun.png" />
+    <Content Include="img\silk\webcam.png" />
+    <Content Include="img\silk\webcam_add.png" />
+    <Content Include="img\silk\webcam_delete.png" />
+    <Content Include="img\silk\webcam_error.png" />
+    <Content Include="img\silk\world.png" />
+    <Content Include="img\silk\world_add.png" />
+    <Content Include="img\silk\world_delete.png" />
+    <Content Include="img\silk\world_edit.png" />
+    <Content Include="img\silk\world_go.png" />
+    <Content Include="img\silk\world_link.png" />
+    <Content Include="img\silk\wrench.png" />
+    <Content Include="img\silk\wrench_orange.png" />
+    <Content Include="img\silk\xhtml.png" />
+    <Content Include="img\silk\xhtml_add.png" />
+    <Content Include="img\silk\xhtml_delete.png" />
+    <Content Include="img\silk\xhtml_go.png" />
+    <Content Include="img\silk\xhtml_valid.png" />
+    <Content Include="img\silk\zoom.png" />
+    <Content Include="img\silk\zoom_in.png" />
+    <Content Include="img\silk\zoom_out.png" />
+    <Content Include="img\tab0.gif" />
+    <Content Include="img\tab1.gif" />
+    <Content Include="img\tab2.gif" />
+    <Content Include="img\tab3.gif" />
+    <Content Include="img\tabs.jpg" />
+    <Content Include="img\tabsBg.gif" />
+    <Content Include="img\tabsRightFade.gif" />
+    <Content Include="img\telerikLogo.gif" />
+    <Content Include="img\textfield.gif" />
+    <Content Include="img\top.png" />
+    <Content Include="img\top_federal.png" />
+    <Content Include="img\trans.gif" />
+    <Content Include="img\tree.gif" />
+    <Content Include="img\TreeIcons\add.gif" />
+    <Content Include="img\TreeIcons\arrow_down.gif" />
+    <Content Include="img\TreeIcons\arrow_left.gif" />
+    <Content Include="img\TreeIcons\arrow_right.gif" />
+    <Content Include="img\TreeIcons\arrow_up.gif" />
+    <Content Include="img\TreeIcons\block_blue.gif" />
+    <Content Include="img\TreeIcons\block_grey.gif" />
+    <Content Include="img\TreeIcons\block_orange.gif" />
+    <Content Include="img\TreeIcons\block_red.gif" />
+    <Content Include="img\TreeIcons\block_yellow.gif" />
+    <Content Include="img\TreeIcons\book.gif" />
+    <Content Include="img\TreeIcons\book_open.gif" />
+    <Content Include="img\TreeIcons\bug.gif" />
+    <Content Include="img\TreeIcons\calculator.gif" />
+    <Content Include="img\TreeIcons\calendar.gif" />
+    <Content Include="img\TreeIcons\car.gif" />
+    <Content Include="img\TreeIcons\cassette.gif" />
+    <Content Include="img\TreeIcons\cd.gif" />
+    <Content Include="img\TreeIcons\chart.gif" />
+    <Content Include="img\TreeIcons\chart_bar.gif" />
+    <Content Include="img\TreeIcons\chart_pie.gif" />
+    <Content Include="img\TreeIcons\checkmark.gif" />
+    <Content Include="img\TreeIcons\clock.gif" />
+    <Content Include="img\TreeIcons\computer.gif" />
+    <Content Include="img\TreeIcons\content.gif" />
+    <Content Include="img\TreeIcons\contract.gif" />
+    <Content Include="img\TreeIcons\delete.gif" />
+    <Content Include="img\TreeIcons\discussion.gif" />
+    <Content Include="img\TreeIcons\disk_multiple.gif" />
+    <Content Include="img\TreeIcons\document.gif" />
+    <Content Include="img\TreeIcons\documents.gif" />
+    <Content Include="img\TreeIcons\document_check.gif" />
+    <Content Include="img\TreeIcons\document_pencil.gif" />
+    <Content Include="img\TreeIcons\dollar.gif" />
+    <Content Include="img\TreeIcons\email.gif" />
+    <Content Include="img\TreeIcons\exclamation.gif" />
+    <Content Include="img\TreeIcons\fav.gif" />
+    <Content Include="img\TreeIcons\floppydisc.gif" />
+    <Content Include="img\TreeIcons\folder_close.gif" />
+    <Content Include="img\TreeIcons\folder_open.gif" />
+    <Content Include="img\TreeIcons\group.gif" />
+    <Content Include="img\TreeIcons\house.gif" />
+    <Content Include="img\TreeIcons\information.gif" />
+    <Content Include="img\TreeIcons\key.gif" />
+    <Content Include="img\TreeIcons\lightbulb.gif" />
+    <Content Include="img\TreeIcons\link.gif" />
+    <Content Include="img\TreeIcons\lock_closed.gif" />
+    <Content Include="img\TreeIcons\lock_open.gif" />
+    <Content Include="img\TreeIcons\magnifier.GIF" />
+    <Content Include="img\TreeIcons\money.gif" />
+    <Content Include="img\TreeIcons\moneybag.gif" />
+    <Content Include="img\TreeIcons\person.gif" />
+    <Content Include="img\TreeIcons\plane.gif" />
+    <Content Include="img\TreeIcons\printer.gif" />
+    <Content Include="img\TreeIcons\question.gif" />
+    <Content Include="img\TreeIcons\recycle.gif" />
+    <Content Include="img\TreeIcons\refresh.gif" />
+    <Content Include="img\TreeIcons\RSS.gif" />
+    <Content Include="img\TreeIcons\screwdriver.gif" />
+    <Content Include="img\TreeIcons\settings.gif" />
+    <Content Include="img\TreeIcons\skullcrossbones.gif" />
+    <Content Include="img\TreeIcons\thumb_up.gif" />
+    <Content Include="img\TreeIcons\ticker.gif" />
+    <Content Include="img\TreeIcons\tools.gif" />
+    <Content Include="img\TreeIcons\tree.gif" />
+    <Content Include="img\TreeIcons\world.gif" />
+    <Content Include="img\TreeIcons\wrench.gif" />
+    <Content Include="img\TreeIcons\xmark.gif" />
+    <Content Include="img\treeMinus.gif" />
+    <Content Include="img\treePlus.gif" />
+    <Content Include="img\treeview.jpg" />
+    <Content Include="img\up.gif" />
+    <Content Include="img\uparrow.gif" />
+    <Content Include="img\Update-Pressed.gif" />
+    <Content Include="img\Update.gif" />
+    <Content Include="img\UpdateCheck.gif" />
+    <Content Include="img\up_disable.gif" />
+    <Content Include="img\viewpermission.jpg" />
+    <Content Include="img\viewpermission.png" />
+    <Content Include="img\vs.gif" />
+    <Content Include="img\VSoptimized.gif" />
+    <Content Include="img\welcome.gif" />
+    <Content Include="img\welcomeBg.gif" />
+    <Content Include="img\welcomeDemo.gif" />
+    <Content Include="img\welcomeExamples.gif" />
+    <Content Include="img\welcomeExamplesImg.gif" />
+    <Content Include="img\welcomeHelp.gif" />
+    <Content Include="img\welcomeHelpImg.gif" />
+    <Content Include="img\welcomePurchase.gif" />
+    <Content Include="img\welcomePurchaseImg.gif" />
+    <Content Include="img\welcomeQuickStart.gif" />
+    <Content Include="img\welcomeQuickStartImg.gif" />
+    <Content Include="img\welcomeSupport.gif" />
+    <Content Include="img\welcomeSupportImg.gif" />
+    <Content Include="img\x.gif" />
+    <Content Include="Login.aspx" />
+    <Content Include="mainview.aspx" />
+    <Content Include="ManageAccounts\CompanyAdmin.aspx" />
+    <Content Include="ManageAccounts\EmailLog.aspx" />
+    <Content Include="ManageAccounts\PageAccessLog.aspx" />
+    <Content Include="ManageAccounts\RoleAccessReview.aspx" />
+    <Content Include="MemberHome.aspx" />
+    <Content Include="Migration.aspx" />
+    <Content Include="scripts\ConfirmUnload.js" />
+    <Content Include="scripts\DynamicTotals.js" />
+    <Content Include="scripts\jquery-1.3.2.js" />
+    <Content Include="scripts\jquery-latest.js" />
+    <Content Include="ManageAccounts\Admin.Master" />
+    <Content Include="SiteDown.htm" />
+    <Content Include="ManageAccounts\UserAccessReview.aspx" />
+    <Content Include="TemplateAddEdit.aspx" />
+    <Content Include="TemplateList.aspx" />
+    <Content Include="ToolsFileMIS.xml" />
+    <None Include="Web References\us.vacloud.devmdws\BoolTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\DataSourceArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\DomainArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\EmrSvc.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web References\us.vacloud.devmdws\EmrSvc.wsdl" />
+    <None Include="Web References\us.vacloud.devmdws\MentalHealthInstrumentResultSetTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\NoteResultTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\OrderDialogItemArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\OrderTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\PatientArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\PatientCareTeamTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\PatientRecordFlagArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\PatientTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\PersonsTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\RadiologyReportTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\RegionArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\RegionTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\ReminderReportPatientListTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\SiteArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\SiteTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedAllergyArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedAppointmentArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedChemHemRptArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedConsultArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedCytologyRptArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedHealthSummaryArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedHospitalLocationArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedIcdRptArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedInpatientStayArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedLabTestArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedMedicationArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedMentalHealthInstrumentAdministrationArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedMentalHealthResultSetArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedMicrobiologyRptArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedNoteArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedOrderArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedPatientArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedPatientArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedPatientAssociateArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedProblemArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedRadiologyReportArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedSurgeryReportArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedSurgicalPathologyRptArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedText.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedTextArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedVisitArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedVisitArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedVitalSignArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TaggedVitalSignSetArrays.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TextArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\TextTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\UserArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\UserSecurityKeyArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\us.vacloud.devmdws\UserTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountDeactivated.aspx.designer.vb">
+      <DependentUpon>AccountDeactivated.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDeactivated.aspx.vb">
+      <DependentUpon>AccountDeactivated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppointmentPrintPreview.aspx.designer.vb">
+      <DependentUpon>AppointmentPrintPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentPrintPreview.aspx.vb">
+      <DependentUpon>AppointmentPrintPreview.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AppointmentPrintPreviewMember.aspx.designer.vb">
+      <DependentUpon>AppointmentPrintPreviewMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentPrintPreviewMember.aspx.vb">
+      <DependentUpon>AppointmentPrintPreviewMember.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Appointments.aspx.designer.vb">
+      <DependentUpon>Appointments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments.aspx.vb">
+      <DependentUpon>Appointments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AppointmentsList.aspx.designer.vb">
+      <DependentUpon>AppointmentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentsList.aspx.vb">
+      <DependentUpon>AppointmentsList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AppointmentsListMember.aspx.designer.vb">
+      <DependentUpon>AppointmentsListMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentsListMember.aspx.vb">
+      <DependentUpon>AppointmentsListMember.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="clsAppointment.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsAcquisitionRequestError.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsASPUser.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsGridSettingsPersister.vb" />
+    <Compile Include="clsLoginCheck.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsNodeInfo.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsPatient.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsUtilities.vb" />
+    <Compile Include="clsDocumentFetch.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsModuleTypeAudit.vb" />
+    <Compile Include="Blank.aspx.designer.vb">
+      <DependentUpon>Blank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blank.aspx.vb">
+      <DependentUpon>Blank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsAudit.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsAuditAction.vb" />
+    <Compile Include="clsCheckStatus.vb" />
+    <Compile Include="clsDocument.vb" />
+    <Compile Include="clsEmail.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsModifiedDate.vb" />
+    <Compile Include="clsPageLog.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsURLScrub.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsVANS.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsWebPageActionLog.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentPage.aspx.designer.vb">
+      <DependentUpon>ContentPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPage.aspx.vb">
+      <DependentUpon>ContentPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MySession.vb" />
+    <Compile Include="SignatureManagement.aspx.designer.vb">
+      <DependentUpon>SignatureManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignatureManagement.aspx.vb">
+      <DependentUpon>SignatureManagement.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="src\soap\VistaDao.vb" />
+    <Compile Include="TemplateByClinicPrintPreview.aspx.designer.vb">
+      <DependentUpon>TemplateByClinicPrintPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateByClinicPrintPreview.aspx.vb">
+      <DependentUpon>TemplateByClinicPrintPreview.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TemplatePrintPreview.aspx.designer.vb">
+      <DependentUpon>TemplatePrintPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplatePrintPreview.aspx.vb">
+      <DependentUpon>TemplatePrintPreview.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TemplateSearch.aspx.designer.vb">
+      <DependentUpon>TemplateSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateSearch.aspx.vb">
+      <DependentUpon>TemplateSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ctrlEmail.ascx.designer.vb">
+      <DependentUpon>ctrlEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlEmail.ascx.vb">
+      <DependentUpon>ctrlEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DocumentAdd.aspx.designer.vb">
+      <DependentUpon>DocumentAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentAdd.aspx.vb">
+      <DependentUpon>DocumentAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocumentHistory.aspx.designer.vb">
+      <DependentUpon>DocumentHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentHistory.aspx.vb">
+      <DependentUpon>DocumentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocumentView.aspx.designer.vb">
+      <DependentUpon>DocumentView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentView.aspx.vb">
+      <DependentUpon>DocumentView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FolderList.aspx.designer.vb">
+      <DependentUpon>FolderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FolderList.aspx.vb">
+      <DependentUpon>FolderList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FolderListTabs.aspx.designer.vb">
+      <DependentUpon>FolderListTabs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FolderListTabs.aspx.vb">
+      <DependentUpon>FolderListTabs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HomeMain.aspx.designer.vb">
+      <DependentUpon>HomeMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeMain.aspx.vb">
+      <DependentUpon>HomeMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeText.aspx.designer.vb">
+      <DependentUpon>HomeText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeText.aspx.vb">
+      <DependentUpon>HomeText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinkManagement.aspx.designer.vb">
+      <DependentUpon>LinkManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinkManagement.aspx.vb">
+      <DependentUpon>LinkManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mainview.aspx.designer.vb">
+      <DependentUpon>mainview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mainview.aspx.vb">
+      <DependentUpon>mainview.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\Admin.Master.designer.vb">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\Admin.Master.vb">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\CompanyAdmin.aspx.designer.vb">
+      <DependentUpon>CompanyAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\CompanyAdmin.aspx.vb">
+      <DependentUpon>CompanyAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\EmailLog.aspx.designer.vb">
+      <DependentUpon>EmailLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\EmailLog.aspx.vb">
+      <DependentUpon>EmailLog.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\MemberManagement.aspx.designer.vb">
+      <DependentUpon>MemberManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\MemberManagement.aspx.vb">
+      <DependentUpon>MemberManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\MemberApprove.aspx.designer.vb">
+      <DependentUpon>MemberApprove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\MemberApprove.aspx.vb">
+      <DependentUpon>MemberApprove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\PageAccessLog.aspx.designer.vb">
+      <DependentUpon>PageAccessLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\PageAccessLog.aspx.vb">
+      <DependentUpon>PageAccessLog.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\RoleAccessReview.aspx.designer.vb">
+      <DependentUpon>RoleAccessReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\RoleAccessReview.aspx.vb">
+      <DependentUpon>RoleAccessReview.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\RoleManagement.aspx.designer.vb">
+      <DependentUpon>RoleManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\RoleManagement.aspx.vb">
+      <DependentUpon>RoleManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\SupplierCreate.aspx.designer.vb">
+      <DependentUpon>SupplierCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\SupplierCreate.aspx.vb">
+      <DependentUpon>SupplierCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\SupplierManagement.aspx.designer.vb">
+      <DependentUpon>SupplierManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\SupplierManagement.aspx.vb">
+      <DependentUpon>SupplierManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\SupplierManagementUpdate.aspx.designer.vb">
+      <DependentUpon>SupplierManagementUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\SupplierManagementUpdate.aspx.vb">
+      <DependentUpon>SupplierManagementUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageDocuments.aspx.designer.vb">
+      <DependentUpon>ManageDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageDocuments.aspx.vb">
+      <DependentUpon>ManageDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member.Master.designer.vb">
+      <DependentUpon>Member.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Member.Master.vb">
+      <DependentUpon>Member.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberHome.aspx.designer.vb">
+      <DependentUpon>MemberHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberHome.aspx.vb">
+      <DependentUpon>MemberHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Migration.aspx.designer.vb">
+      <DependentUpon>Migration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Migration.aspx.vb">
+      <DependentUpon>Migration.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ModuleTypeAdmin.aspx.designer.vb">
+      <DependentUpon>ModuleTypeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleTypeAdmin.aspx.vb">
+      <DependentUpon>ModuleTypeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NoTimeout.aspx.designer.vb">
+      <DependentUpon>NoTimeout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoTimeout.aspx.vb">
+      <DependentUpon>NoTimeout.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RadEditPage.aspx.designer.vb">
+      <DependentUpon>RadEditPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RadEditPage.aspx.vb">
+      <DependentUpon>RadEditPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RadEditUploadView.aspx.designer.vb">
+      <DependentUpon>RadEditUploadView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RadEditUploadView.aspx.vb">
+      <DependentUpon>RadEditUploadView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecoverPassword.aspx.designer.vb">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecoverPassword.aspx.vb">
+      <DependentUpon>RecoverPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecoverUserName.aspx.designer.vb">
+      <DependentUpon>RecoverUserName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecoverUserName.aspx.vb">
+      <DependentUpon>RecoverUserName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageAccounts\UserAccessReview.aspx.designer.vb">
+      <DependentUpon>UserAccessReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccounts\UserAccessReview.aspx.vb">
+      <DependentUpon>UserAccessReview.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TemplateAddEdit.aspx.designer.vb">
+      <DependentUpon>TemplateAddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateAddEdit.aspx.vb">
+      <DependentUpon>TemplateAddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TemplateList.aspx.designer.vb">
+      <DependentUpon>TemplateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateList.aspx.vb">
+      <DependentUpon>TemplateList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UserInformation.aspx.designer.vb">
+      <DependentUpon>UserInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInformation.aspx.vb">
+      <DependentUpon>UserInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VALogin.Master.designer.vb">
+      <DependentUpon>VALogin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="VALogin.Master.vb">
+      <DependentUpon>VALogin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web References\us.vacloud.devmdws\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\BrowserList.browser" />
+    <Content Include="App_Data\RadSpell\de-DE.tdf" />
+    <Content Include="App_Data\RadSpell\en-US.tdf" />
+    <Content Include="App_Data\RadSpell\fr-FR.tdf" />
+    <Content Include="AccountDeactivated.aspx" />
+    <Content Include="images\folderIcon.png" />
+    <Content Include="images\help.png" />
+    <Content Include="images\SharepointIcon.png" />
+    <Content Include="images\Transparent.png" />
+    <Content Include="ManageAccounts\MemberApprove.aspx" />
+    <Content Include="ManageAccounts\SupplierManagementUpdate.aspx" />
+    <Content Include="NoTimeout.aspx" />
+    <Content Include="RecoverPassword.aspx" />
+    <Content Include="RecoverUserName.aspx" />
+    <Content Include="scripts\upload.js" />
+    <Content Include="styles\calendar.css" />
+    <Content Include="images\Calendar.gif" />
+    <Content Include="scripts\calendar.js" />
+    <Content Include="images\Calendar_ov.gif" />
+    <Content Include="calendarexample.html" />
+    <Content Include="DocumentAdd.aspx" />
+    <Content Include="DocumentHistory.aspx" />
+    <Content Include="DocumentView.aspx" />
+    <Content Include="HomeMain.aspx" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\inter-header-banner-top-rightx.jpg" />
+    <Content Include="images\pdficon_small.gif" />
+    <Content Include="LinkManagement.aspx" />
+    <Content Include="ManageAccounts\MemberManagement.aspx" />
+    <Content Include="ManageAccounts\RoleManagement.aspx" />
+    <Content Include="ManageAccounts\SupplierCreate.aspx" />
+    <Content Include="ManageAccounts\SupplierManagement.aspx" />
+    <Content Include="ManageDocuments.aspx" />
+    <Content Include="ModuleTypeAdmin.aspx" />
+    <Content Include="RadEditPage.aspx" />
+    <Content Include="RadEditUploadView.aspx" />
+    <Content Include="related-links.js" />
+    <Content Include="styles\mainstyle.css" />
+    <None Include="img\FileIcons\pspbrwse.jbf" />
+    <Content Include="Member.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="UserInformation.aspx" />
+    <Content Include="VALogin.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://devmdws.vacloud.us/mdws2/EmrSvc.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\us.vacloud.devmdws\</RelPath>
+      <UpdateFromURL>http://devmdws.vacloud.us/mdws2/EmrSvc.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>VANS_us_vacloud_devmdws_EmrSvc</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63687</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,167 @@
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="VALogin.master.vb" Inherits="VANS.VALogin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!-- START: META DATA -->
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="language" content="en" />
+    <meta name="author" content=" " />
+    <meta name="subject" content=" " />
+    <meta name="keywords" content=" " />
+    <meta name="datecreated" content=" " />
+    <meta name="datereviewed" content=" " />
+    <!-- END: META DATA -->
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <link href="styles/mainstyle.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        fieldset
+        {
+            border: 1px solid #666666;
+        }
+    </style>
+    <title>Login/Registration</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--  
+<style type="text/css" media="screen,print">
+    @import url(./va_files/2009/styles/va-user-styles.css);
+    @import url(./va_files/2009/styles/vaSearch.css);
+    @import url(./va_files/2009/styles/jkmegamenu.css);
+    @import url(./va_files/2009/styles/va-styles.css);
+</style>
+
+<style type="text/css" media="screen">
+	#prBanner { display:none; }
+</style>
+
+<style type="text/css" media="print">
+	#prBanner { padding:0px; margin:0px; border:0px; position: relative; }
+	#banner-wrapper { display:none; }
+	#banner-area-menu { display:none; }
+	#footer-area-links { display:none; }
+</style>
+
+<script type="text/javascript" src="./va_files/2009/scripts/global.js"></script>
+
+<!-- START: SURVEY -->
+<script type="text/javascript" src="./va_files/fsrscripts/triggerParams.js"></script>
+<script type="text/javascript" src="./va_files/fsrscripts/stdLauncher.js"></script>
+<script type="text/javascript">    Poll();</script>
+<!-- END: SURVEY -->
+
+<link href="styles/mainstyle.css" rel="stylesheet" type="text/css" />
+    --%>
+    <script type="text/javascript">
+        function TimeOutRedirect() {
+            try {
+                if (top.location != location) {
+                    top.location.href = document.location.href;
+                }
+            }
+            catch (Exception) { }
+        }
+       
+    </script>
+</head>
+<body onload="TimeOutRedirect();">
+    <div>
+        <%--<a href="#content">skip to page content</a> </div>--%>
+        <%--
+<!-- START: OUTER CONTAINER -->
+    <div class="vabdywrpr">
+
+	<!-- START: VA PRINT BANNER -->
+	<img src="./va_files/2009/images/inter-header-banner-print.gif" id="prBanner" width="996" height="100" alt="United States Department of Veterans Affairs" title="United States Department of Veterans Affairs"/>
+	<!-- END: VA PRINT BANNER -->
+
+	<!-- START: VA BANNER AND SEARCH FORM --> 
+	<!--#include virtual="./va_files/2009/includes/inter_va_banner.htm" --> 
+	<!-- END: VA BANNER AND SEARCH FORM -->
+
+	<!-- START: MEGA MENU -->
+	<div id="banner-area-menu">
+		<!-- START: GLOBAL MEGA MENU LINKS -->
+		<script language="javascript" type="text/javascript">		    createMenu();</script>
+		<noscript>
+			<!-- START: NOSCRIPT FOR GLOBAL MEGA MENU LINKS -->
+			<ul>
+				<li><a href="http://www.va.gov/" title="main menu item Home">Home</a></li>
+				<li><a href="http://www.va.gov/landing2_vetsrv.htm" title="main menu item Veteran Services">Veteran Services</a></li>
+				<li><a href="http://www.va.gov/landing2_business.htm" title="main menu item Business">Business</a></li>
+				<li><a href="http://www.va.gov/landing2_about.htm" title="main menu item About VA">About VA</a></li>
+				<li><a href="http://www.va.gov/landing2_media_room.htm" title="main menu item Media Room">Media Room</a></li>
+				<li><a href="http://www.va.gov/landing2_locations.htm" title="main menu item Locations">Locations</a></li>
+				<li><a href="http://www.va.gov/landing2_contact.htm" title="main menu item Contact Us">Contact Us</a></li>
+			</ul>
+			<!-- END: NOSCRIPT FOR GLOBAL MEGA MENU LINKS -->
+		</noscript>
+		<!-- END: GLOBAL MEGA MENU LINKS -->
+
+		<!-- START: LOCAL MEGA MENU (RELATED LINKS) -->
+		<div class="relatedLinks">
+			<script language="javascript" type="text/javascript" src="related-links.js"></script>
+			<noscript>
+				<ul>
+					<li><a href="landing2_relatedlinks.htm" title="main menu item Related Links">Related Links</a></li>
+				</ul>
+			</noscript>
+		</div>
+		<!-- END: LOCAL MEGA MENU (RELATED LINKS) -->
+	</div>
+	<!-- END: MEGA MENU -->
+</div>
+<div class="vabdyback">
+	<div id="vacontent-wrapper">
+			<!-- START: PAGE CONTENT -->--%>
+        <form id="form1" runat="server">
+        <%-- <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+                   </telerik:RadScriptManager>
+                   <telerik:RadSplitter id="RadSplitter1" runat="server" BorderSize="0" 
+                        LiveResize="True" PanesBorderSize="0" Skin="Outlook" SplitBarsSize="" 
+                       Width="100%" Height="700" >  
+                       <telerik:RadPane id="LeftPane" runat="server" BackColor="#1E2D54" MaxWidth="400" MinWidth="250" Width="250px"  Height="700" >  
+                       
+                       <table bgcolor="#495A70" width="400px" border="0" cellpadding="0" cellspacing="0" align="left"><tr><td class="LeftTitle">
+
+                       </td></tr> </table><br /><br />
+                    </telerik:RadPane>
+                 <telerik:RadSplitBar ID="LeftSplitBar" runat="server" CollapseMode="Forward" 
+                            Visible="true" Height="700" /> 
+                                 <telerik:RadPane ID="ContentPane" runat="server" EnableEmbeddedBaseStylesheet="False" 
+                                    EnableEmbeddedSkins="False" Index="2" Skin="" BackColor="#DAE2E8">  
+                                    	<span style="position: absolute;"><a name="#content"></a></span> --%>
+        <asp:ContentPlaceHolder ID="LoginContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+        <%--</telerik:RadPane>
+                        </telerik:RadSplitter> --%>
+        </form>
+        <%--	<!-- END: PAGE CONTENT -->
+		<hr id="vacontent-footer-divider"/>
+
+		<!-- START: VA FOOTER -->
+		<div id="footer-area">
+			<p id="footer-area-links">
+				<a href="http://www.va.gov/" title="VA Home">VA Home</a>&nbsp;|&nbsp;
+				<a href="http://www.va.gov/privacy/" title="Privacy Policy">Privacy Policy</a>&nbsp;|&nbsp;
+				<a href="http://www.foia.va.gov/" title="FOIA">FOIA</a>&nbsp;|&nbsp;
+				<a href="http://www.va.gov/webpolicylinks.asp" title="Web Policies">Web Policies</a>&nbsp;|&nbsp;
+				<a href="http://www.va.gov/orm/NOFEAR_Select.asp" title="No FEAR Act Data">No FEAR Act Data</a>&nbsp;|&nbsp;
+				<a href="http://www.va.gov/general/site_map.htm" title="Site Index">Site Index</a>&nbsp;|&nbsp;
+				<a href="http://www.va.gov/ext_redirect.asp?url=http://www.usa.gov/&amp;type=1" title="USA.gov">USA.gov</a>&nbsp;|&nbsp;
+				<a href="http://www.va.gov/ext_redirect.asp?url=http://www.whitehouse.gov/&amp;type=1" title="White House">White House</a>&nbsp;|&nbsp;
+				<a href="http://www.va.gov/ext_redirect.asp?url=http://www.nationalresourcedirectory.gov/&amp;type=1" title="National Resource Directory">National Resource Directory</a>&nbsp;|&nbsp;
+				<a href="http://www.va.gov/oig/" title="Inspector General">Inspector General</a>
+			</p>
+			<p id="footer-address">U.S. Department of Veterans Affairs - 810 Vermont Avenue, NW - Washington, DC 20420</p>
+		</div>
+		<!-- END: VA FOOTER -->
+
+		<p id="footer-review">Reviewed/Updated Date: <!-- START: LAST MOD DATE --><asp:Label ID="lblPageModDate" runat="server" Text=""></asp:Label><!-- END: LAST MOD DATE --></p>
+
+	</div>--%>
+    </div>
+</body>
+</html>

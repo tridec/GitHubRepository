@@ -1,0 +1,128 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Admin.master.vb" Inherits="VANS.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>VOA Administrative Pages</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <script type="text/javascript" src="../scripts/calendar.js"></script>
+    </asp:ContentPlaceHolder>
+    <link href="../styles/calendar.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/mainstyle.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .RadTabStrip
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .RadTabStripTop_Default .rtsLevel
+        {
+            background-color: transparent;
+        }
+        .RadTabStrip .rtsLevel1
+        {
+            padding-top: 0;
+        }
+        .RadTabStrip .rtsLevel
+        {
+            clear: both;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            padding-top: 1px;
+        }
+        .RadTabStrip .rtsUL
+        {
+            overflow: hidden;
+            float: left;
+            margin: 0;
+            padding: 0;
+        }
+        .RadTabStrip_Default .rtsLI
+        {
+            color: #000;
+            font: 12px/26px "Segoe UI" , Arial, sans-serif;
+        }
+        .RadTabStrip .rtsLI
+        {
+            overflow: hidden;
+            list-style-type: none;
+            margin: 0;
+        }
+        .RadTabStripTop_Default .rtsLI .rtsSelected
+        {
+            background-position: 0 -26px;
+        }
+        .RadTabStripTop_Default .rtsFirst .rtsLink
+        {
+            background-position: 0 0;
+        }
+        .RadTabStripTop_Default .rtsLevel .rtsLink
+        {
+            background-image: url( 'mvwres://Telerik.Web.UI, Version=2009.2.701.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4/Telerik.Web.UI.Skins.Default.TabStrip.TabStripStates.png' );
+        }
+        .RadTabStripTop_Default .rtsLink
+        {
+            background-position: 0 -52px;
+        }
+        .RadTabStrip_Default .rtsLink
+        {
+            color: #000;
+            font: 12px/26px "Segoe UI" , Arial, sans-serif;
+        }
+        .RadTabStrip .rtsLink
+        {
+            text-align: center;
+        }
+        .RadTabStrip .rtsLink
+        {
+            display: block;
+            outline: none;
+            cursor: pointer;
+            text-decoration: none;
+            white-space: nowrap;
+            padding-left: 9px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+    </telerik:RadScriptManager>
+    <table border="0" cellpadding="0" cellspacing="0" align="left" summary="This table is for layout purposes only."
+        width="100%">
+        <tr valign="top">
+            <td class="rightTitle" colspan="2">
+                Administrative Pages
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <telerik:RadTabStrip runat="server" ID="rtsAdmin">
+                    <Tabs>
+                        <telerik:RadTab id="rtbManageAccounts" runat="server" NavigateUrl="~/ManageAccounts/SupplierManagement.aspx"
+                            Text="Manage Accounts" SelectedIndex="0">
+                        </telerik:RadTab>
+                        <telerik:RadTab id="rtbEmailLog" runat="server" NavigateUrl="~/ManageAccounts/EmailLog.aspx"
+                            Text="Email Log" SelectedIndex="1">
+                        </telerik:RadTab>
+                        <telerik:RadTab id="rtbPageLog" runat="server" NavigateUrl="~/ManageAccounts/PageAccessLog.aspx"
+                            Text="Page Log" SelectedIndex="2">
+                        </telerik:RadTab>
+                    </Tabs>
+                </telerik:RadTabStrip>
+            </td>
+            <td>
+                <asp:LinkButton ID="lbLogout" Style="color: #000" runat="server">Logout</asp:LinkButton>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

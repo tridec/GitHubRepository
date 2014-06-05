@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Accessible Date Picker Calendar</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Tom Leadholm" />
+  <meta name="copyright" content="&#169; No rights reserved. Share and share alike."/>
+  <meta name="description" content="Accessible date picker calendar based on WebSemantics' program in JavaScript.  Added hidden divs (so no callback is needed), allowed date ranges,... " />
+  <style type="text/css" media="screen" title="Default">@import "styles/calendar.css";</style>
+  <script type="text/javascript" src="scripts/calendar.js"></script>
+</head>
+<body>
+<a href="#" id="skipcontent" onclick="javascript:document.getElementById('strDate1').focus();" title="click here to skip to main content">Skip to Main Content</a>
+  <h1>Accessible date picker calendar with selectable date ranges using hidden divs </h1>
+  <!-- original 02/09/2005 -->
+  <!-- updated 16/12/2005 -->
+  <p class="revision">Author: <span class="author"><a href="mailto:Tom.Leadholm@va.gov">Tom Leadholm</a></span> , adapted from Mike Foskett's calendar at WebSemantics.  Updated: <span class="date">17th June 2009</span> </p>
+  <p>Created for Department of Veterans Affairs Adverse Drug Event Reporting System</p>
+
+
+<!-- // Sample calendar date picker  -->
+<br />** NOTE: sample date picker, no date range is specified so any date can be selected...<br />
+  <label for="strDate1">Select Date [format: mm/dd/yyyy] <input type="text" id="strDate0" name="strDate0" size="6"/></label>
+  &nbsp;&nbsp;<a href="#" onclick="javascript:calendar(null,null,null, 'strDate0', 'cal_div_0',null,null);return false;"><img src="images/calendar.gif"  height="21" width="24" alt="Date Picker Calendar - click to open"  style="border:0" /></a>
+  &nbsp; &nbsp;<input type="button" value="reset" onclick="javascript:document.getElementById('strDate0').value ='';" title="click to clear date"/>
+  <div id="cal_div_0" style="display:none"></div>
+
+  <br /><br /><br />
+
+
+<!-- // Start date calendar  -->
+<br />** NOTE: in this example, the calendar is given a date range.  Start date cannot exist in the future, so dates beyond today are disabled...<br />
+  <label for="strDate1">Start Date [format: mm/dd/yyyy] <input type="text" id="strDate1" name="strDate1" size="6"/></label>
+  &nbsp;&nbsp;<a href="#" onclick="javascript:calendar(null,null,null, 'strDate1', 'cal_div_1',null,0);return false;"><img src="images/calendar.gif"  height="21" width="24" alt="Date Picker Calendar - click to open"  style="border:0" /></a>
+
+  &nbsp; &nbsp;<input type="button" value="reset" onclick="javascript:document.getElementById('strDate1').value ='';" title="click to clear date"/>
+  <div id="cal_div_1" style="display:none"></div>
+
+  <br />
+
+
+<!-- // Stop date calendar -- disable all dates <= start_date selected above  -->
+
+<br />** NOTE: in this example, the calendar is given a date range.  Dates before the date selected above are disabled...<br />
+  &nbsp;<label for="strDate2">End Date [format: mm/dd/yyyy] <input type="text" id="strDate2" name="strDate2"  size="6" /></label>
+  <script type="text/javascript" language="javascript">
+    date_start = document.getElementById("strDate1").value;
+  </script>
+  &nbsp;&nbsp;<a href="#" onclick="javascript:calendar(null,null,null, 'strDate2', 'cal_div_2',document.getElementById('strDate1').value,0);return false;"><img src="images/calendar.gif"  height="21" width="24"  alt="Date Picker Calendar - click to open"  style="border:0" /></a>
+  &nbsp; &nbsp;<input type="button" value="reset" onclick="javascript:document.getElementById('strDate2').value ='';" title="click to clear date"/>
+  <div id="cal_div_2" style="display:none"></div>
+
+
+
+<!--    <script type="text/javascript">calendar(null,null,null, "strDate1", "cal_div_1");</script>  -->
+
+    <br />
+    
+
+  <noscript>
+    <form id="bookingdate" action="index.html" method="get">  <!-- tcl, this is a call back, page is reloaded with the selected day added as a runtime parameter  -->
+      <!-- Note: Server-side error checking required and action address equals the basURL variable in the JS -->
+      <fieldset>
+      <legend>Accessible Date Picker Demo</legend>
+        <label for="strDate1">Start Date [format: dd/mm/yyyy] <input type="text" id="Text1" name="strDate1" /></label><br /><br />
+        <label for="strDate2">End Date [format: dd/mm/yyyy] <input type="text" id="Text2" name="strDate2" /></label><br /><br />
+        <input type="submit" value="Sample Submit button" />
+      </fieldset>
+    </form>
+  </noscript>
+  <div class="shiftoffscreen"><a name="skipcalendar" id="skipcalendar"></a></div>
+
+
+
+<script type="text/javascript" language=javascript>document.getElementById("skipcontent").focus();</script>
+
+</body>
+</html>
